@@ -1,0 +1,16 @@
+[
+{
+  "modid": "dimensional_ores",
+  "name": "Dimensional Ore",
+  "description": "Add Modded Ores from Other Mod Dimensional Stone.",
+  "version": "${version}",
+  "mcversion": "${mcversion}",
+  "url": "",
+  "updateUrl": "",
+  "authorList": ["Mrthomas20121"],
+  "credits": "",
+  "logoFile": "",
+  "screenshots": [],
+  "dependencies": []
+}
+]
