@@ -1,7 +1,7 @@
 # Dimensional Ores
 Add Common Modded Ores to Modded Dimensions.
 
-## Supported Dimensions :
+## Supported Dimensions Mods :
 - Atum
 - The Aether
 - The Abyss
