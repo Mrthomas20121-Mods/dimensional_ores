@@ -1,4 +1,4 @@
-package stardust_binding.dimensional_ores;
+package stardust_binding.dimensional_ores.ore;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.state.IBlockState;
@@ -22,7 +22,17 @@ public enum Stone implements IStringSerializable {
     ABYSS_STONE("theabyss"),
     GAIA_STONE("gaiadimension"),
     TURQUOISE_STONE("blue_skies"),
-    LUNAR_STONE("blue_skies");
+    LUNAR_STONE("blue_skies"),
+    MOON_ROCK("galacticraftcore"),
+    TRITON_STONE("extraplanets"),
+    TITANIA_STONE("extraplanets"),
+    JUPITER_STONE("extraplanets"),
+    SATURN_STONE("extraplanets"),
+    EUROPA_STONE("extraplanets"),
+    IO_STONE("extraplanets"),
+    DEIMOS_STONE("extraplanets"),
+    PHOBOS_STONE("extraplanets"),
+    CALLISTO_STONE("extraplanets");
 
     private final String modid;
 
@@ -40,9 +50,25 @@ public enum Stone implements IStringSerializable {
                 return "stone";
             case ABYSS_STONE:
                 return "stoneabyssblock";
+            case MOON_ROCK:
+                return "basic_block_moon";
+            case TRITON_STONE:
+            case TITANIA_STONE:
+            case JUPITER_STONE:
+            case SATURN_STONE:
+            case EUROPA_STONE:
+            case IO_STONE:
+            case DEIMOS_STONE:
+            case PHOBOS_STONE:
+            case CALLISTO_STONE:
+                return this.getName().split("_")[0];
             default:
                 return this.name().toLowerCase();
         }
+    }
+
+    public String getModid() {
+        return modid;
     }
 
     public Block getBlock(ResourceLocation location) {
@@ -72,11 +98,13 @@ public enum Stone implements IStringSerializable {
             case FOGGY_STONE:
                 return Configuration.Conf.mist_id;
             case ABYSS_STONE:
-                return 0;
+                return Configuration.Conf.abyss_id;
             case LUNAR_STONE:
                 return Configuration.Conf.everdawn_id;
             case TURQUOISE_STONE:
                 return Configuration.Conf.everbright_id;
+            case MOON_ROCK:
+                return Configuration.Conf.galacticraft_moon_id;
             default:
                 return 0;
         }

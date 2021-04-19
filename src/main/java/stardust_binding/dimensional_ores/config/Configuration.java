@@ -47,5 +47,11 @@ public class Configuration {
 
         @Config.Comment("Default Dimension ID for The Erebus")
         public static int erebus_id = 66;
+
+        @Config.Comment("Default Dimension ID for The Betweenlands")
+        public static int betweenland_id = 20;
+
+        @Config.Comment("Default Dimension ID for Galacticraft Moon")
+        public static int galacticraft_moon_id = -28;
     }
 }

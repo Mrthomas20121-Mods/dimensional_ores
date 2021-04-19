@@ -28,7 +28,17 @@ Stones = [
     "abyss_stone",
     "turquoise_stone",
     "lunar_stone",
-    "gaia_stone"
+    "gaia_stone",
+    "moon_rock",
+    "triton_stone",
+    "titania_stone",
+    "jupiter_stone",
+    "saturn_stone",
+    "europa_stone",
+    "io_stone",
+    "deimos_stone",
+    "phobos_stone",
+    "callisto_stone"
 ]
 
 def del_none(d):

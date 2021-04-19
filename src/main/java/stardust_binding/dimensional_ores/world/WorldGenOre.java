@@ -7,7 +7,7 @@ import net.minecraft.world.chunk.IChunkProvider;
 import net.minecraft.world.gen.IChunkGenerator;
 import net.minecraft.world.gen.feature.WorldGenMinable;
 import net.minecraftforge.fml.common.IWorldGenerator;
-import stardust_binding.dimensional_ores.Stone;
+import stardust_binding.dimensional_ores.ore.Stone;
 import stardust_binding.dimensional_ores.block.OreBlock;
 import stardust_binding.dimensional_ores.config.Json;
 import stardust_binding.dimensional_ores.config.JsonMetal;

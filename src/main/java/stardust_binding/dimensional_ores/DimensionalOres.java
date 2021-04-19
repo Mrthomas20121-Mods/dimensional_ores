@@ -11,6 +11,7 @@ import org.apache.logging.log4j.Logger;
 import stardust_binding.dimensional_ores.block.OreBlock;
 import stardust_binding.dimensional_ores.config.Json;
 import stardust_binding.dimensional_ores.config.JsonMetal;
+import stardust_binding.dimensional_ores.ore.Stone;
 import stardust_binding.dimensional_ores.world.WorldGenOre;
 
 @Mod(modid = DimensionalOres.MODID, name = DimensionalOres.NAME, version = DimensionalOres.VERSION,

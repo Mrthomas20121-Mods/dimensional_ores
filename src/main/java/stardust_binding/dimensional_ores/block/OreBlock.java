@@ -4,7 +4,7 @@ import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import org.apache.commons.lang3.StringUtils;
 import stardust_binding.dimensional_ores.DimensionalOres;
-import stardust_binding.dimensional_ores.Stone;
+import stardust_binding.dimensional_ores.ore.Stone;
 import stardust_binding.dimensional_ores.config.JsonMetal;
 
 import javax.annotation.Nonnull;
