@@ -53,5 +53,8 @@ public class Configuration {
 
         @Config.Comment("Default Dimension ID for Galacticraft Moon")
         public static int galacticraft_moon_id = -28;
+
+        @Config.Comment("Default Dimension ID for Glacidus")
+        public static int glacidus_id = 84;
     }
 }
