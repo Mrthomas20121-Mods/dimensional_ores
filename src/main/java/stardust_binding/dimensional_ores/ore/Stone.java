@@ -27,8 +27,10 @@ public enum Stone implements IStringSerializable {
     GAIA_STONE("gaiadimension"),
     TURQUOISE_STONE("blue_skies"),
     LUNAR_STONE("blue_skies"),
-    MOON_ROCK("galacticraftplanets"),
+    MOON_ROCK("galacticraftcore"),
     MARS_STONE("galacticraftplanets"),
+    VENUS_STONE("galacticraftplanets"),
+    ASTEROIDS_ROCK("galacticraftplanets"),
     TRITON_STONE("extraplanets"),
     TITANIA_STONE("extraplanets"),
     JUPITER_STONE("extraplanets"),
@@ -41,6 +43,11 @@ public enum Stone implements IStringSerializable {
     GANYMEDE_STONE("extraplanets"),
     OBERON_STONE("extraplanets"),
     IAPETUS_STONE("extraplanets"),
+    RHEA_STONE("extraplanets"),
+    DIONA_ROCK("moreplanets"),
+    FRONOS_STONE("moreplanets"),
+    CHALOS_ROCK("moreplanets"),
+    NIBIRU_ROCK("moreplanets"),
     BETWEENSTONE("thebetweenlands"),
     PITSTONE("thebetweenlands"),
     AURORIANSTONE("theaurorian"),
@@ -77,6 +84,8 @@ public enum Stone implements IStringSerializable {
             case GANYMEDE_STONE:
             case IAPETUS_STONE:
             case OBERON_STONE:
+            case VENUS_STONE:
+            case ASTEROIDS_ROCK:
                 return this.getName().split("_")[0];
             default:
                 return this.name().toLowerCase();
@@ -98,7 +107,7 @@ public enum Stone implements IStringSerializable {
         else if(modid.equals("extraplanets")) {
             return blockstate -> blockstate.equals(ExtraPlanetCompat.INSTANCE.getStone(this, getBlock(new ResourceLocation(this.modid, this.getBlockName()))));
         }
-        else if(modid.equals("galacticraftplanets")) {
+        else if(modid.contains("galacticraft")) {
             return blockstate -> blockstate.equals(GalacticraftCompat.INSTANCE.getStone(this, getBlock(new ResourceLocation(this.modid, this.getBlockName()))));
         }
         return blockState -> blockState.equals(getBlock(new ResourceLocation(this.modid, this.getBlockName())).getDefaultState());
@@ -147,6 +156,12 @@ public enum Stone implements IStringSerializable {
                 return -16;
             case JUPITER_STONE:
                 return -15;
+            case MARS_STONE:
+                return Configuration.Conf.galacticraft_mars_id;
+            case VENUS_STONE:
+                return Configuration.Conf.galacticraft_venus_id;
+            case ASTEROIDS_ROCK:
+                return Configuration.Conf.galacticraft_asteroids_id;
             case BETWEENSTONE:
             case PITSTONE:
                 return Configuration.Conf.betweenland_id;
@@ -165,10 +180,20 @@ public enum Stone implements IStringSerializable {
 
     public ArrayList<String> getBlacklist() {
         ArrayList<String> list = new ArrayList<>();
-        if(modid.equals("galacticraftcore") || modid.equals("extraplanets")) {
-            list.add("copper");
-            list.add("tin");
+        if(modid.contains("galacticraft") || modid.equals("extraplanets") || modid.equals("moreplanets")) {
+            if(this.equals(ASTEROIDS_ROCK) || this.modid.equals("moreplanets")) {
+                list.add("aluminum");
+            }
+            else {
+                list.add("copper");
+                list.add("tin");
+            }
+            if(this.equals(VENUS_STONE)) {
+                list.add("aluminum");
+                list.add("lead");
+            }
         }
+
 
         return list;
     }
