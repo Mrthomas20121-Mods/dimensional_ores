@@ -49,7 +49,7 @@ public class RegistryHandler {
     public static void registerBlocks(RegistryEvent.Register<Block> event) {
         for(JsonMetal metal: Json.metals) {
             for(Stone stone: Stone.values()) {
-                if( (metal.getName().equals("copper") || metal.getName().equals("tin")) && stone.getModid().equals("extraplanets") ) continue;
+                if(stone.getBlacklist().contains(metal.getName())) continue;
                 if(stone.canLoad()) {
                     register(new OreBlock(metal, stone), event.getRegistry());
                 }

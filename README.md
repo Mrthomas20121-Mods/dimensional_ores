@@ -10,3 +10,6 @@ Add Common Modded Ores to Modded Dimensions.
 - Misty World
 - Midnight
 - Gaia Dimension
+- Galacticraft
+- Extra Planets
+- More Planets and More Planets Extra

@@ -16,7 +16,7 @@ import stardust_binding.dimensional_ores.world.WorldGenOre;
 
 @Mod(modid = DimensionalOres.MODID, name = DimensionalOres.NAME, version = DimensionalOres.VERSION,
         dependencies = "required-after:forge@[14.23.5.2847,);"
-        + "required-after:aether_legacy;")
+        + "after:aether_legacy;")
 public class DimensionalOres
 {
     @Mod.Instance
