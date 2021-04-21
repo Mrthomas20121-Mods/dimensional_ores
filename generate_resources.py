@@ -30,6 +30,9 @@ Stones = [
     "lunar_stone",
     "gaia_stone",
     "moon_rock",
+    "mars_rock",
+    "asteroids_rock",
+    "venus_stone",
     "triton_stone",
     "titania_stone",
     "jupiter_stone",
@@ -38,7 +41,19 @@ Stones = [
     "io_stone",
     "deimos_stone",
     "phobos_stone",
-    "callisto_stone"
+    "callisto_stone",
+    "ganymede_stone",
+    "oberon_stone",
+    "iapetus_stone",
+    "rhea_stone",
+    "diona_rock",
+    "fronos_stone",
+    "chalos_rock",
+    "nibiru_rock",
+    "betweenstone",
+    "pitstone",
+    "aurorianstone",
+    "frozen_antinatric_stone"
 ]
 
 def del_none(d):
@@ -88,7 +103,7 @@ for ore in Ores :
     for stone in Stones :
         name = "%s_%s_ore" % (stone, ore)
         cube_all(name, 'dimensional_ores:blocks/%s' % name)
-        img1 = Image.open(os.path.join('textures', 'blocks', 'overlay', '%s.png' % ore)).convert("RGBA")
+        img1 = Image.open(os.path.join('textures', 'blocks', 'overlay_32' if stone == "asteroids_rock" else 'overlay', '%s.png' % ore)).convert("RGBA")
         img2 = Image.open(os.path.join('textures', 'blocks', 'stone', '%s.png' % stone)).convert("RGBA")
         result = Image.alpha_composite(img2, img1)
         result.save('./textures/blocks/%s.png' % name)
