@@ -15,7 +15,9 @@ Ores = [
     "nickel",
     "ardite",
     "cobalt",
-    "osmium"
+    "osmium",
+    "certus_quartz",
+    "draconium"
 ]
 
 Stones = [
@@ -37,6 +39,12 @@ Stones = [
     "titania_stone",
     "jupiter_stone",
     "saturn_stone",
+    "neptune_stone",
+    "ceres_stone",
+    "kepler22b_stone",
+    "eris_stone",
+    "mercury_stone",
+    "titan_stone",
     "europa_stone",
     "io_stone",
     "deimos_stone",
@@ -53,7 +61,14 @@ Stones = [
     "betweenstone",
     "pitstone",
     "aurorianstone",
-    "frozen_antinatric_stone"
+    "frozen_antinatric_stone",
+    "kriffstone",
+    "edenrock",
+    "oasis",
+    "purgot",
+    "zolstone",
+    "xantheon",
+    "xanthian"
 ]
 
 def del_none(d):

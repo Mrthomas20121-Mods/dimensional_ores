@@ -37,6 +37,20 @@ public enum ExtraPlanetCompat implements IModCompat {
                 return state.withProperty(BlockBasicCallisto.BASIC_TYPE, BlockBasicCallisto.EnumBlockBasic.STONE);
             case "ganymede_stone":
                 return state.withProperty(BlockBasicGanymede.BASIC_TYPE, BlockBasicGanymede.EnumBlockBasic.STONE);
+            case "mercury_stone":
+                return state.withProperty(BlockBasicMercury.BASIC_TYPE, BlockBasicMercury.EnumBlockBasic.STONE);
+            case "neptune_stone":
+                return state.withProperty(BlockBasicNeptune.BASIC_TYPE, BlockBasicNeptune.EnumBlockBasic.STONE);
+            case "kepler22b_stone":
+                return state.withProperty(BlockBasicKepler22b.BASIC_TYPE, BlockBasicKepler22b.EnumBlockBasic.STONE);
+            case "ceres_stone":
+                return state.withProperty(BlockBasicCeres.BASIC_TYPE, BlockBasicCeres.EnumBlockBasic.STONE);
+            case "eris_stone":
+                return state.withProperty(BlockBasicEris.BASIC_TYPE, BlockBasicEris.EnumBlockBasic.STONE);
+            case "uranus":
+                return state.withProperty(BlockBasicUranus.BASIC_TYPE, BlockBasicUranus.EnumBlockBasic.STONE);
+            case "titan":
+                return state.withProperty(BlockBasicTitan.BASIC_TYPE, BlockBasicTitan.EnumBlockBasic.STONE);
             default:
                 return state;
         }
