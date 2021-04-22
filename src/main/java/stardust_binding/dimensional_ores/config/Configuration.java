@@ -4,8 +4,13 @@ import net.minecraftforge.common.config.Config;
 import net.minecraftforge.common.config.ConfigManager;
 import net.minecraftforge.fml.client.event.ConfigChangedEvent;
 import net.minecraftforge.fml.common.Mod;
+import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
+import org.apache.commons.io.FileUtils;
 import stardust_binding.dimensional_ores.DimensionalOres;
+
+import java.io.File;
+import java.io.IOException;
 
 @Mod.EventBusSubscriber(modid = DimensionalOres.MODID)
 public class Configuration {
@@ -65,5 +70,26 @@ public class Configuration {
 
         @Config.Comment("Default Dimension ID for Glacidus")
         public static int glacidus_id = 84;
+    }
+
+    public static void copyConfig(FMLPreInitializationEvent event) {
+        File config_dir = event.getModConfigurationDirectory();
+        String[] ores = { "apatite", "ardite", "aluminum", "certus_quartz", "cobalt", "copper", "draconium", "lead", "nickel", "platinum", "silver", "tin", "osmium", "uranium" };
+
+        for(String ore: ores) {
+            File ore_file = new File(config_dir, DimensionalOres.MODID+"/"+ore+".json");
+            String metal_file = "assets/dimensional_ores/config/"+ore+".json";
+            if(!ore_file.exists())
+            {
+                try {
+                    FileUtils.copyInputStreamToFile(Configuration.class.getClassLoader().getResourceAsStream(metal_file), ore_file);
+                }
+                catch (IOException e)
+                {
+                    throw new Error(String.format("Problem Creating %s.json", ore), e);
+                }
+            }
+            else DimensionalOres.getLogger().info("File already exists, Skipping!");
+        }
     }
 }

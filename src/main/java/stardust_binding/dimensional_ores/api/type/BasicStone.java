@@ -1,10 +1,5 @@
 package stardust_binding.dimensional_ores.api.type;
 
-import com.google.common.base.Predicate;
-import net.minecraft.block.state.IBlockState;
-import stardust_binding.dimensional_ores.compat.ExtraPlanetCompat;
-import stardust_binding.dimensional_ores.compat.GalacticraftCompat;
-
 import java.util.ArrayList;
 
 public class BasicStone extends Stone {
@@ -15,17 +10,6 @@ public class BasicStone extends Stone {
 
     public BasicStone(String stone_name, String modid, int dimension_id) {
         super(stone_name, modid, dimension_id);
-    }
-
-    @Override
-    public Predicate<IBlockState> getPredicate() {
-        if(getModId().equals("extraplanets")) {
-            return state -> state.equals(ExtraPlanetCompat.INSTANCE.getStone(this, this.getBlockState()));
-        }
-        else if(getModId().contains("galacticraft")) {
-            return state -> state.equals(GalacticraftCompat.INSTANCE.getStone(this, this.getBlockState()));
-        }
-        return super.getPredicate();
     }
 
     @Override

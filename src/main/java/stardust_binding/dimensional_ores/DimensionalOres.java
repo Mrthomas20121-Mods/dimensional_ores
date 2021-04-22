@@ -14,7 +14,7 @@ import stardust_binding.dimensional_ores.api.registry.Registries;
 import stardust_binding.dimensional_ores.api.type.Ore;
 import stardust_binding.dimensional_ores.api.type.Stone;
 import stardust_binding.dimensional_ores.block.OreBlock;
-import stardust_binding.dimensional_ores.config.Json;
+import stardust_binding.dimensional_ores.config.Configuration;
 import stardust_binding.dimensional_ores.config.OreProperties;
 import stardust_binding.dimensional_ores.world.WorldGenOre;
 
@@ -48,8 +48,7 @@ public class DimensionalOres
         MinecraftForge.EVENT_BUS.post(new Events.PreEvent<>(new ResourceLocation(MODID, "ore_registry"), Registries.getOreRegistry()));
         logger = event.getModLog();
 
-        Json.copyConfig(event);
-        Json.init(event);
+        Configuration.copyConfig(event);
 	}
 
     @Mod.EventHandler

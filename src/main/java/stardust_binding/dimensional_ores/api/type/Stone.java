@@ -10,6 +10,7 @@ import net.minecraftforge.fml.common.Loader;
 import net.minecraftforge.fml.common.registry.ForgeRegistries;
 import net.minecraftforge.registries.IForgeRegistryEntry;
 import stardust_binding.dimensional_ores.DimensionalOres;
+import stardust_binding.dimensional_ores.compat.ExtraPlanetCompat;
 import stardust_binding.dimensional_ores.compat.GalacticraftCompat;
 
 import javax.annotation.Nonnull;
@@ -56,7 +57,10 @@ public abstract class Stone extends IForgeRegistryEntry.Impl<Stone> implements I
     protected IBlockState getBlockState() {
         Block block = ForgeRegistries.BLOCKS.getValue(new ResourceLocation(this.getModId(), this.getBlockName()));
         if(getModId().toLowerCase().contains("galacticraft")) {
-            return GalacticraftCompat.INSTANCE.getStone(null, block);
+            return GalacticraftCompat.INSTANCE.getStone(this, block.getDefaultState());
+        }
+        else if(getModId().toLowerCase().equals("extraplanets")) {
+            return ExtraPlanetCompat.INSTANCE.getStone(this, block.getDefaultState());
         }
         return block.getDefaultState();
     }

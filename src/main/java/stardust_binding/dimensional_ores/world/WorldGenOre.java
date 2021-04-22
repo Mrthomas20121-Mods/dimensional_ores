@@ -11,7 +11,6 @@ import stardust_binding.dimensional_ores.api.registry.Registries;
 import stardust_binding.dimensional_ores.api.type.Ore;
 import stardust_binding.dimensional_ores.api.type.Stone;
 import stardust_binding.dimensional_ores.block.OreBlock;
-import stardust_binding.dimensional_ores.config.Json;
 import stardust_binding.dimensional_ores.config.OreProperties;
 
 import java.util.Random;

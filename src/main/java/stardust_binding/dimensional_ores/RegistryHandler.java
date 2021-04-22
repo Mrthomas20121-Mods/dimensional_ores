@@ -14,11 +14,12 @@ import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 import net.minecraftforge.registries.IForgeRegistry;
+import stardust_binding.dimensional_ores.api.registry.Registries;
+import stardust_binding.dimensional_ores.api.type.Ore;
+import stardust_binding.dimensional_ores.api.type.Stone;
 import stardust_binding.dimensional_ores.block.OreBlock;
-import stardust_binding.dimensional_ores.config.Json;
 import stardust_binding.dimensional_ores.config.OreProperties;
 import stardust_binding.dimensional_ores.item.ItemBlockDim;
-import stardust_binding.dimensional_ores.ore.Stone;
 
 import javax.annotation.Nonnull;
 import java.util.ArrayList;
@@ -47,11 +48,11 @@ public class RegistryHandler {
 
     @SubscribeEvent
     public static void registerBlocks(RegistryEvent.Register<Block> event) {
-        for(OreProperties metal: Json.metals) {
-            for(Stone stone: Stone.values()) {
-                if(stone.getBlacklist().contains(metal.getName())) continue;
-                if(stone.canLoad()) {
-                    register(new OreBlock(metal, stone), event.getRegistry());
+        for(Ore ore: Registries.getOreRegistry().getValuesCollection()) {
+            for(Stone stone: Registries.getStoneRegistry().getValuesCollection()) {
+                if(stone.getBlacklist().contains(ore.getName())) continue;
+                if(stone.isModLoaded()) {
+                    register(new OreBlock(ore, stone), event.getRegistry());
                 }
             }
         }

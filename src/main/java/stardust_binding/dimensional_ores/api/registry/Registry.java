@@ -18,8 +18,9 @@ public class Registry {
     public static void registerOres(Events.PreEvent<Ore> event) {
         IForgeRegistry<Ore> r = event.getRegistry();
 
-        r.register(new Ore("ardite"));
         r.register(new Ore("aluminum"));
+        r.register(new Ore("apatite"));
+        r.register(new Ore("ardite"));
         r.register(new Ore("certus_quartz"));
         r.register(new Ore("cobalt"));
         r.register(new Ore("copper"));
@@ -31,7 +32,6 @@ public class Registry {
         r.register(new Ore("tin"));
         r.register(new Ore("osmium"));
         r.register(new Ore("uranium"));
-        r.register(new Ore("apatite"));
     }
 
     @SubscribeEvent(priority = EventPriority.LOWEST)
