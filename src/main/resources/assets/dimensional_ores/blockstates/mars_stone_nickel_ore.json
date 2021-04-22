@@ -4,7 +4,7 @@
   "defaults": {
     "model": "cube_all",
     "textures": {
-      "all": "dimensional_ores:blocks/mars_rock_tin_ore"
+      "all": "dimensional_ores:blocks/mars_stone_nickel_ore"
     }
   },
   "variants": {

@@ -1,8 +1,44 @@
 package stardust_binding.dimensional_ores.config;
 
+import com.google.gson.Gson;
+import com.google.gson.reflect.TypeToken;
+import com.google.gson.stream.JsonReader;
+import net.minecraftforge.fml.common.event.FMLInitializationEvent;
+import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import org.apache.commons.lang3.StringUtils;
+import stardust_binding.dimensional_ores.DimensionalOres;
+import stardust_binding.dimensional_ores.api.registry.Registries;
+import stardust_binding.dimensional_ores.api.type.Ore;
 
-public class JsonMetal {
+import java.io.File;
+import java.io.IOException;
+import java.nio.file.Files;
+import java.util.LinkedHashMap;
+import java.util.List;
+import java.util.Map;
+
+public class OreProperties {
+
+    private static Gson gson = new Gson();
+    private static Map<String, OreProperties> ores = new LinkedHashMap<>();
+
+    public static void init() {
+        for(Ore ore: Registries.ORE_REGISTRY.getValuesCollection()) {
+            String name = ore.getRegistryName().getPath().toLowerCase();
+            try {
+                JsonReader reader = new JsonReader(Files.newBufferedReader(new File(DimensionalOres.config, "dimensional_ores/ores/"+name+".json").toPath()));
+                ores.put(name, gson.fromJson(reader, OreProperties.class));
+                reader.close();
+            }
+            catch (IOException e) {
+                DimensionalOres.getLogger().info("Error Loading "+name+".json");
+            }
+        }
+    }
+
+    public static OreProperties get(String ore) {
+        return ores.get(ore);
+    }
 
     private final String name;
     private final int hardness;
@@ -12,7 +48,7 @@ public class JsonMetal {
     private final int[] dimensions;
     private final boolean enabled;
 
-    public JsonMetal(String name, int hardness, int mininglevel, int lightlevel, String[] biomes, int[] dimensions, boolean enabled) {
+    public OreProperties(String name, int hardness, int mininglevel, int lightlevel, String[] biomes, int[] dimensions, boolean enabled) {
         this.name = name;
         this.hardness = hardness;
         this.mininglevel = mininglevel;
@@ -22,7 +58,7 @@ public class JsonMetal {
         this.enabled = enabled;
     }
 
-    public JsonMetal(String name, int hardness, int mininglevel, int lightlevel, String biome, int dimension, boolean enabled) {
+    public OreProperties(String name, int hardness, int mininglevel, int lightlevel, String biome, int dimension, boolean enabled) {
         this(name, hardness, mininglevel, lightlevel, new String[] { biome }, new int[] { dimension }, enabled);
     }
 

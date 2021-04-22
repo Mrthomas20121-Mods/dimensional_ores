@@ -4,50 +4,58 @@ import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import org.apache.commons.lang3.StringUtils;
 import stardust_binding.dimensional_ores.DimensionalOres;
-import stardust_binding.dimensional_ores.ore.Stone;
-import stardust_binding.dimensional_ores.config.JsonMetal;
+import stardust_binding.dimensional_ores.api.type.Ore;
+import stardust_binding.dimensional_ores.api.type.Stone;
+import stardust_binding.dimensional_ores.config.OreProperties;
 
 import javax.annotation.Nonnull;
-import java.util.EnumMap;
 import java.util.HashMap;
+import java.util.LinkedHashMap;
 
 public class OreBlock extends Block {
 
-    private static HashMap<JsonMetal, EnumMap<Stone, OreBlock>> table = new HashMap<>();
+    private static HashMap<Ore, LinkedHashMap<Stone, OreBlock>> table = new HashMap<>();
 
-    public static OreBlock get(JsonMetal metal, Stone stone) {
+    public static OreBlock get(Ore metal, Stone stone) {
         return table.get(metal).get(stone);
     }
 
-    private final JsonMetal metal;
+    private final Ore ore;
+    private final OreProperties properties;
     private final Stone stone;
 
-    public OreBlock(JsonMetal metal, Stone stone) {
+    public OreBlock(Ore ore, Stone stone) {
         super(Material.ROCK);
 
-        this.metal = metal;
+        this.ore = ore;
         this.stone = stone;
-        this.setRegistryName(DimensionalOres.MODID, stone.name().toLowerCase()+"_"+metal.getName()+"_ore");
-        this.setTranslationKey(DimensionalOres.MODID+"."+stone.name().toLowerCase()+"_"+metal.getName()+"_ore");
+        this.setRegistryName(DimensionalOres.MODID, stone.getName().toLowerCase()+"_"+ore.getName()+"_ore");
+        this.setTranslationKey(DimensionalOres.MODID+"."+stone.getName().toLowerCase()+"_"+ore.getName()+"_ore");
 
-        this.setHardness(metal.getHardness());
-        this.setHarvestLevel("pickaxe", metal.getMininglevel());
-        this.setLightLevel(metal.getLightlevel());
+        this.properties = OreProperties.get(ore.getName());
 
-        if(!table.containsKey(metal)) {
-            table.put(metal, new EnumMap<>(Stone.class));
+        this.setHardness(properties.getHardness());
+        this.setHarvestLevel("pickaxe", properties.getMininglevel());
+        this.setLightLevel(properties.getLightlevel());
+
+        if(!table.containsKey(ore)) {
+            table.put(ore, new LinkedHashMap<>());
         }
-        table.get(metal).put(stone, this);
+        table.get(ore).put(stone, this);
     }
 
     @Nonnull
     @Override
     public String getLocalizedName() {
-        return String.format("%s %s %s", StringUtils.capitalize(stone.getName()), StringUtils.capitalize(metal.getName()), "Ore");
+        return String.format("%s %s %s", StringUtils.capitalize(stone.getName()), StringUtils.capitalize(ore.getName()), "Ore");
     }
 
-    public JsonMetal getMetal() {
-        return metal;
+    public Ore getOre() {
+        return ore;
+    }
+
+    public OreProperties getOreProperties() {
+        return properties;
     }
 
     public Stone getStone() {

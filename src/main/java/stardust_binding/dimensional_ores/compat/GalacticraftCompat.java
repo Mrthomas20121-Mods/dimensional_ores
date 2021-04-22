@@ -6,25 +6,23 @@ import micdoodle8.mods.galacticraft.planets.mars.blocks.BlockBasicMars;
 import micdoodle8.mods.galacticraft.planets.venus.blocks.BlockBasicVenus;
 import net.minecraft.block.Block;
 import net.minecraft.block.state.IBlockState;
-import stardust_binding.dimensional_ores.ore.IModCompat;
-import stardust_binding.dimensional_ores.ore.Stone;
+import stardust_binding.dimensional_ores.api.type.Stone;
 
 public enum GalacticraftCompat implements IModCompat {
 
     INSTANCE;
 
     @Override
-    public IBlockState getStone(Stone stone, Block block) {
-        IBlockState state = block.getDefaultState();
+    public IBlockState getStone(Stone stone, IBlockState state) {
 
-        switch (stone) {
-            case MOON_ROCK:
+        switch (stone.getName()) {
+            case "moon_rock":
                 return state.withProperty(BlockBasicMoon.BASIC_TYPE_MOON, BlockBasicMoon.EnumBlockBasicMoon.MOON_STONE);
-            case MARS_STONE:
+            case "mars_stone":
                 return state.withProperty(BlockBasicMars.BASIC_TYPE, BlockBasicMars.EnumBlockBasic.MARS_STONE);
-            case ASTEROIDS_ROCK:
+            case "asteroids_rock":
                 return state.withProperty(BlockBasicAsteroids.BASIC_TYPE, BlockBasicAsteroids.EnumBlockBasic.ASTEROID_0);
-            case VENUS_STONE:
+            case "venus_stone":
                 return state.withProperty(BlockBasicVenus.BASIC_TYPE_VENUS, BlockBasicVenus.EnumBlockBasicVenus.ROCK_HARD);
             default:
                 return state;

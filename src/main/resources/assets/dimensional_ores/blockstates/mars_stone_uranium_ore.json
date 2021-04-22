@@ -4,7 +4,7 @@
   "defaults": {
     "model": "cube_all",
     "textures": {
-      "all": "dimensional_ores:blocks/mars_rock_silver_ore"
+      "all": "dimensional_ores:blocks/mars_stone_uranium_ore"
     }
   },
   "variants": {

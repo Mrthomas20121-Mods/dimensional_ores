@@ -30,7 +30,7 @@ Stones = [
     "lunar_stone",
     "gaia_stone",
     "moon_rock",
-    "mars_rock",
+    "mars_stone",
     "asteroids_rock",
     "venus_stone",
     "triton_stone",

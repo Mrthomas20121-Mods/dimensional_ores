@@ -15,7 +15,7 @@ import java.util.List;
 public class Json {
 
     private static Gson gson = new Gson();
-    public static List<JsonMetal> metals = new ArrayList<>();
+    public static List<OreProperties> metals = new ArrayList<>();
 
     private static final String metal_file = "assets/dimensional_ores/config/metals.json";
 
@@ -23,7 +23,7 @@ public class Json {
 
         try {
             JsonReader ores = new JsonReader(Files.newBufferedReader(new File(event.getModConfigurationDirectory(), "dimensional_ores/metals.json").toPath()));
-            metals = gson.fromJson(ores, new TypeToken<List<JsonMetal>>() {}.getType());
+            metals = gson.fromJson(ores, new TypeToken<List<OreProperties>>() {}.getType());
             ores.close();
         }
         catch (IOException e) {

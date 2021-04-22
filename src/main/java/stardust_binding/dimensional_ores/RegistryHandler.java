@@ -16,7 +16,7 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 import net.minecraftforge.registries.IForgeRegistry;
 import stardust_binding.dimensional_ores.block.OreBlock;
 import stardust_binding.dimensional_ores.config.Json;
-import stardust_binding.dimensional_ores.config.JsonMetal;
+import stardust_binding.dimensional_ores.config.OreProperties;
 import stardust_binding.dimensional_ores.item.ItemBlockDim;
 import stardust_binding.dimensional_ores.ore.Stone;
 
@@ -47,7 +47,7 @@ public class RegistryHandler {
 
     @SubscribeEvent
     public static void registerBlocks(RegistryEvent.Register<Block> event) {
-        for(JsonMetal metal: Json.metals) {
+        for(OreProperties metal: Json.metals) {
             for(Stone stone: Stone.values()) {
                 if(stone.getBlacklist().contains(metal.getName())) continue;
                 if(stone.canLoad()) {
