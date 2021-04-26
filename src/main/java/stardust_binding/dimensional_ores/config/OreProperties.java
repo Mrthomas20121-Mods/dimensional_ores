@@ -20,11 +20,11 @@ import java.util.Map;
 public class OreProperties {
 
     private static Gson gson = new GsonBuilder().serializeNulls().create();
-    private static Map<Stone, Map<Ore, OreProperties>> ores = new LinkedHashMap<>();
+    private static Map<Stone, Map<String, OreProperties>> ores = new LinkedHashMap<>();
 
     public static OreProperties getOreData(Stone stone, Ore ore) {
         if(ores.containsKey(stone))
-            return ores.get(stone).get(ore);
+            return ores.get(stone).get(ore.getName());
         return new OreProperties(5, 1, 0, false, 12, 8);
     }
 
@@ -37,11 +37,7 @@ public class OreProperties {
                 File ore_config = new File(DimensionalOres.config, "dimensional_ores/stone/"+name+".json");
                 JsonReader reader = new JsonReader(Files.newBufferedReader(ore_config.toPath()));
                 Map<String, OreProperties> properties = gson.fromJson(reader, new TypeToken<Map<String, OreProperties>>(){}.getType());
-                Map<Ore, OreProperties> ore_map = new LinkedHashMap<>();
-                for(Ore ore: Registries.getOreRegistry().getValuesCollection()) {
-                    ore_map.put(ore, properties.get(ore.getName()));
-                }
-                ores.put(stone, ore_map);
+                ores.put(stone, properties);
                 reader.close();
             }
             catch (IOException e) {

@@ -15,7 +15,6 @@ import stardust_binding.dimensional_ores.api.type.Ore;
 import stardust_binding.dimensional_ores.api.type.Stone;
 import stardust_binding.dimensional_ores.block.OreBlock;
 import stardust_binding.dimensional_ores.config.Configuration;
-import stardust_binding.dimensional_ores.config.OreProperties;
 import stardust_binding.dimensional_ores.world.WorldGenOre;
 
 import java.io.File;
@@ -57,11 +56,8 @@ public class DimensionalOres
 
         for(Ore ore: Registries.getOreRegistry().getValuesCollection()) {
             for(Stone stone: Registries.getStoneRegistry().getValuesCollection()) {
-                OreProperties properties = OreProperties.getOreData(stone, ore);
-                if(properties != null) {
-                    OreDictionary.registerOre(properties.getOreDict(), OreBlock.get(ore, stone));
-                    if(!properties.getAlternativeOredict().equals("")) OreDictionary.registerOre(properties.getAlternativeOredict(), OreBlock.get(ore, stone));
-                }
+                OreDictionary.registerOre(ore.getOreDict(), OreBlock.get(ore, stone));
+                if(!ore.getAlternativeOredict().equals("")) OreDictionary.registerOre(ore.getAlternativeOredict(), OreBlock.get(ore, stone));
             }
         }
     }

@@ -2,7 +2,6 @@ package stardust_binding.dimensional_ores.world;
 
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
-import net.minecraft.world.biome.Biome;
 import net.minecraft.world.chunk.IChunkProvider;
 import net.minecraft.world.gen.IChunkGenerator;
 import net.minecraft.world.gen.feature.WorldGenMinable;
@@ -23,16 +22,11 @@ public class WorldGenOre implements IWorldGenerator {
         for(Stone stone: Registries.getStoneRegistry().getValuesCollection()) {
             for(Ore ore: Registries.getOreRegistry().getValuesCollection()) {
                 OreProperties properties = OreProperties.getOreData(stone, ore);
-                if(properties != null) {
-                    if(!properties.isEnabled()) continue;
-                    if(world.provider.getDimension() ==  stone.getDimensionId()) {
-                        final BlockPos chunkPos = new BlockPos(chunkX << 4, 0, chunkZ << 4);
-                        Biome biome = world.provider.getBiomeProvider().getBiome(chunkPos);
-                        WorldGenMinable minable = new WorldGenMinable(OreBlock.get(ore, stone).getDefaultState(), properties.getOreCout(), stone.getPredicate());
-                        if(properties.containBiome(biome.getRegistryName().toString())) {
-                            this.spawn(world, rng, chunkPos, minable, properties.getVeinPerChunk());
-                        }
-                    }
+                if(!properties.isEnabled()) continue;
+                if(world.provider.getDimension() ==  stone.getDimensionId()) {
+                    final BlockPos chunkPos = new BlockPos(chunkX << 4, 0, chunkZ << 4);
+                    WorldGenMinable minable = new WorldGenMinable(OreBlock.get(ore, stone).getDefaultState(), properties.getOreCout(), stone.getPredicate());
+                    this.spawn(world, rng, chunkPos, minable, properties.getVeinPerChunk());
                 }
             }
         }
