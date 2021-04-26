@@ -25,7 +25,7 @@ public class OreProperties {
     public static OreProperties getOreData(Stone stone, Ore ore) {
         if(ores.containsKey(stone))
             return ores.get(stone).get(ore);
-        return new OreProperties(stone.getName()+"_"+ore.getName(), 5, 1, 0, false, 12, 8);
+        return new OreProperties(5, 1, 0, false, 12, 8);
     }
 
     public static void init() {
@@ -49,8 +49,6 @@ public class OreProperties {
             }
         }
     }
-
-    private final String name;
     private final int hardness;
     private final int mininglevel;
     private final int lightlevel;
@@ -58,8 +56,7 @@ public class OreProperties {
     private final int veinPerChunk;
     private final int oreCout;
 
-    public OreProperties(String name, int hardness, int mininglevel, int lightlevel, boolean enabled, int veinPerChunk, int oreCount) {
-        this.name = name;
+    public OreProperties(int hardness, int mininglevel, int lightlevel, boolean enabled, int veinPerChunk, int oreCount) {
         this.hardness = hardness;
         this.mininglevel = mininglevel;
         this.lightlevel = lightlevel;
@@ -80,10 +77,6 @@ public class OreProperties {
         return lightlevel;
     }
 
-    public String getName() {
-        return name;
-    }
-
     public boolean isEnabled() {
         return enabled;
     }
@@ -94,16 +87,5 @@ public class OreProperties {
 
     public int getOreCout() {
         return oreCout;
-    }
-
-    public String getOreDict() {
-        return "ore".concat(StringUtils.capitalize(this.getName()));
-    }
-
-    public String getAlternativeOredict() {
-        if(this.name.equals("aluminum")) {
-            return "ore".concat("Aluminium");
-        }
-        return "";
     }
 }
