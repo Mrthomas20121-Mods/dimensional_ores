@@ -18,4 +18,8 @@ public class Ore extends IForgeRegistryEntry.Impl<Ore> implements IStringSeriali
     public String getName() {
         return this.getRegistryName().getPath();
     }
+
+    public String getTranslationKey() {
+        return DimensionalOres.MODID+".ore."+this.getName();
+    }
 }

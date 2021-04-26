@@ -74,19 +74,68 @@ public class Configuration {
 
     public static void copyConfig(FMLPreInitializationEvent event) {
         File config_dir = event.getModConfigurationDirectory();
-        String[] ores = { "apatite", "ardite", "aluminum", "certus_quartz", "cobalt", "copper", "draconium", "lead", "nickel", "platinum", "silver", "tin", "osmium", "uranium" };
+        //String[] ores = { "apatite", "ardite", "aluminum", "certus_quartz", "cobalt", "copper", "draconium", "lead", "nickel", "platinum", "silver", "tin", "osmium", "uranium" };
+        String[] stones = {
+                "holystone",
+                "limestone",
+                "foggy_stone",
+                "umberstone",
+                "trenchstone",
+                "nightstone",
+                "abyss_stone",
+                "gaia_stone",
+                "turquoise_stone",
+                "lunar_stone",
+                "moon_rock",
+                "mars_stone",
+                "venus_stone",
+                "asteroids_rock",
+                "mercury_stone",
+                "triton_stone",
+                "titania_stone",
+                "jupiter_stone",
+                "saturn_stone",
+                "neptune_stone",
+                "ceres_stone",
+                "kepler22b_stone",
+                "eris_stone",
+                "uranus_stone",
+                "europa_stone",
+                "io_stone",
+                "deimos_stone",
+                "phobos_stone",
+                "callisto_stone",
+                "ganymede_stone",
+                "titan_stone",
+                "oberon_stone",
+                "iapetus_stone",
+                "rhea_stone",
+                "diona_stone",
+                "fronos_stone",
+                "chalos_rock",
+                "nibiru_rock",
+                "altum",
+                "atheon",
+                "caligro",
+                "betweenstone",
+                "pitstone",
+                "aurorianstone",
+                "frozen_antinatic_stone"
+        };
 
-        for(String ore: ores) {
-            File ore_file = new File(config_dir, DimensionalOres.MODID+"/"+ore+".json");
-            String metal_file = "assets/dimensional_ores/config/"+ore+".json";
-            if(!ore_file.exists())
+        for(String stone: stones) {
+            File stone_file = new File(config_dir, DimensionalOres.MODID+"/stone/"+stone+".json");
+
+            boolean result = new File(config_dir, DimensionalOres.MODID+"/stone").mkdir();
+            String ore_file = "assets/dimensional_ores/config/"+stone+".json";
+            if(!stone_file.exists())
             {
                 try {
-                    FileUtils.copyInputStreamToFile(Configuration.class.getClassLoader().getResourceAsStream(metal_file), ore_file);
+                    FileUtils.copyInputStreamToFile(Configuration.class.getClassLoader().getResourceAsStream(ore_file), stone_file);
                 }
                 catch (IOException e)
                 {
-                    throw new Error(String.format("Problem Creating %s.json", ore), e);
+                    throw new Error(String.format("Problem Moving %s.json", stone), e);
                 }
             }
             else DimensionalOres.getLogger().info("File already exists, Skipping!");

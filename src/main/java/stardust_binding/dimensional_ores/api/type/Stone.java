@@ -71,5 +71,9 @@ public abstract class Stone extends IForgeRegistryEntry.Impl<Stone> implements I
         return this.getRegistryName().getPath();
     }
 
+    public String getTranslationKey() {
+        return DimensionalOres.MODID+".stone."+this.getName();
+    }
+
     public abstract ArrayList<String> getBlacklist();
 }

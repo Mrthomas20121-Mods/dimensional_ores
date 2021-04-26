@@ -68,7 +68,10 @@ Stones = [
     "purgot",
     "zolstone",
     "xantheon",
-    "xanthian"
+    "xanthian",
+	"altum",
+	"atheon",
+	"caligro"
 ]
 
 def del_none(d):

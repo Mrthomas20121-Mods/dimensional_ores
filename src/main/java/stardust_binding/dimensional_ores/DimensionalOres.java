@@ -42,11 +42,11 @@ public class DimensionalOres
     @Mod.EventHandler
     public void preInit(FMLPreInitializationEvent event)
     {
+        logger = event.getModLog();
         config = event.getModConfigurationDirectory();
         MinecraftForge.EVENT_BUS.register(this);
-        MinecraftForge.EVENT_BUS.post(new Events.PreEvent<>(new ResourceLocation(MODID, "stone_registry"), Registries.getStoneRegistry()));
-        MinecraftForge.EVENT_BUS.post(new Events.PreEvent<>(new ResourceLocation(MODID, "ore_registry"), Registries.getOreRegistry()));
-        logger = event.getModLog();
+        MinecraftForge.EVENT_BUS.post(new Events.PreEvent<>(new ResourceLocation(DimensionalOres.MODID, "stone"), Registries.STONE_REGISTRY));
+        MinecraftForge.EVENT_BUS.post(new Events.PreEvent<>(new ResourceLocation(DimensionalOres.MODID, "ore"), Registries.ORE_REGISTRY));
 
         Configuration.copyConfig(event);
 	}
@@ -57,9 +57,11 @@ public class DimensionalOres
 
         for(Ore ore: Registries.getOreRegistry().getValuesCollection()) {
             for(Stone stone: Registries.getStoneRegistry().getValuesCollection()) {
-                OreProperties properties = OreProperties.get(ore.getName());
-                OreDictionary.registerOre(properties.getOreDict(), OreBlock.get(ore, stone));
-                if(!properties.getAlternativeOredict().equals("")) OreDictionary.registerOre(properties.getAlternativeOredict(), OreBlock.get(ore, stone));
+                OreProperties properties = OreProperties.getOreData(stone, ore);
+                if(properties != null) {
+                    OreDictionary.registerOre(properties.getOreDict(), OreBlock.get(ore, stone));
+                    if(!properties.getAlternativeOredict().equals("")) OreDictionary.registerOre(properties.getAlternativeOredict(), OreBlock.get(ore, stone));
+                }
             }
         }
     }

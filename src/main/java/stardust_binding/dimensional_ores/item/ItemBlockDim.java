@@ -2,6 +2,7 @@ package stardust_binding.dimensional_ores.item;
 
 import net.minecraft.item.ItemBlock;
 import net.minecraft.item.ItemStack;
+import net.minecraft.util.text.TextComponentTranslation;
 import org.apache.commons.lang3.StringUtils;
 import stardust_binding.dimensional_ores.api.type.Ore;
 import stardust_binding.dimensional_ores.api.type.Stone;
@@ -42,7 +43,7 @@ public class ItemBlockDim extends ItemBlock {
     @Nonnull
     public String getItemStackDisplayName(@Nonnull ItemStack stack)
     {
-        return String.format("%s %s %s", cap(stone.getName()), cap(ore.getName()), "Ore");
+        return String.format("%s %s %s", new TextComponentTranslation(stone.getTranslationKey()).getFormattedText(), new TextComponentTranslation(ore.getTranslationKey()).getFormattedText(), "Ore");
     }
 
     /**

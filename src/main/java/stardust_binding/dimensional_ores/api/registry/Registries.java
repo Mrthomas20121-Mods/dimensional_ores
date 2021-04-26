@@ -3,6 +3,7 @@ package stardust_binding.dimensional_ores.api.registry;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.fml.common.Mod;
+import net.minecraftforge.fml.common.eventhandler.EventPriority;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 import net.minecraftforge.registries.IForgeRegistry;
@@ -26,7 +27,7 @@ public class Registries {
         return GameRegistry.findRegistry(Ore.class);
     }
 
-    @SubscribeEvent
+    @SubscribeEvent(priority = EventPriority.HIGHEST)
     public static void registerRegistries(RegistryEvent.NewRegistry event) {
         STONE_REGISTRY = new RegistryBuilder<Stone>()
                 .setType(Stone.class)

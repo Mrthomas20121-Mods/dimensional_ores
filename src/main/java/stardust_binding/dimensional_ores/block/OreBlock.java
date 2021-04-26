@@ -32,7 +32,7 @@ public class OreBlock extends Block {
         this.setRegistryName(DimensionalOres.MODID, stone.getName().toLowerCase()+"_"+ore.getName()+"_ore");
         this.setTranslationKey(DimensionalOres.MODID+"."+stone.getName().toLowerCase()+"_"+ore.getName()+"_ore");
 
-        this.properties = OreProperties.get(ore.getName());
+        this.properties = OreProperties.getOreData(stone, ore);
 
         this.setHardness(properties.getHardness());
         this.setHarvestLevel("pickaxe", properties.getMininglevel());

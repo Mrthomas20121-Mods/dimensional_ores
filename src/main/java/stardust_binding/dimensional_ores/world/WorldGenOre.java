@@ -20,16 +20,18 @@ public class WorldGenOre implements IWorldGenerator {
     @Override
     public void generate(Random rng, int chunkX, int chunkZ, World world, IChunkGenerator chunkGenerator, IChunkProvider chunkProvider)
     {
-        for(Ore ore: Registries.getOreRegistry().getValuesCollection()) {
-            OreProperties properties = OreProperties.get(ore.getName());
-            for(Stone stone: Registries.getStoneRegistry().getValuesCollection()) {
-                if(!properties.isEnabled()) continue;
-                if(world.provider.getDimension() ==  stone.getDimensionId() && properties.containDimension(stone.getDimensionId())) {
-                    final BlockPos chunkPos = new BlockPos(chunkX << 4, 0, chunkZ << 4);
-                    Biome biome = world.provider.getBiomeProvider().getBiome(chunkPos);
-                    WorldGenMinable minable = new WorldGenMinable(OreBlock.get(ore, stone).getDefaultState(), 12, stone.getPredicate());
-                    if(properties.containBiome(biome.getRegistryName().toString()) || properties.getBiomes().length == 0) {
-                        this.spawn(world, rng, chunkPos, minable, 8);
+        for(Stone stone: Registries.getStoneRegistry().getValuesCollection()) {
+            for(Ore ore: Registries.getOreRegistry().getValuesCollection()) {
+                OreProperties properties = OreProperties.getOreData(stone, ore);
+                if(properties != null) {
+                    if(!properties.isEnabled()) continue;
+                    if(world.provider.getDimension() ==  stone.getDimensionId()) {
+                        final BlockPos chunkPos = new BlockPos(chunkX << 4, 0, chunkZ << 4);
+                        Biome biome = world.provider.getBiomeProvider().getBiome(chunkPos);
+                        WorldGenMinable minable = new WorldGenMinable(OreBlock.get(ore, stone).getDefaultState(), properties.getOreCout(), stone.getPredicate());
+                        if(properties.containBiome(biome.getRegistryName().toString())) {
+                            this.spawn(world, rng, chunkPos, minable, properties.getVeinPerChunk());
+                        }
                     }
                 }
             }

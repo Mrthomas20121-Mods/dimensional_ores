@@ -30,17 +30,17 @@ public class Registry {
         r.register(new Ore("platinum"));
         r.register(new Ore("silver"));
         r.register(new Ore("tin"));
+        r.register(new Ore("tungsten"));
         r.register(new Ore("osmium"));
         r.register(new Ore("uranium"));
     }
 
     @SubscribeEvent(priority = EventPriority.LOWEST)
-    public static void registerOresLowest(Events.PreEvent<Ore> event) {
-        IForgeRegistry<Ore> r = event.getRegistry();
+    public static void registerStoneLowest(Events.PreEvent<Stone> event) {
         OreProperties.init();
     }
 
-    @SubscribeEvent
+    @SubscribeEvent(priority = EventPriority.HIGHEST)
     public static void registerStones(Events.PreEvent<Stone> event) {
         IForgeRegistry<Stone> r = event.getRegistry();
 
@@ -90,9 +90,9 @@ public class Registry {
         r.register(new BasicStone("europa_stone", "extraplanets", -1501));
         r.register(new BasicStone("io_stone", "extraplanets", -1500));
         r.register(new BasicStone("deimos_stone", "extraplanets", -1503));
-        r.register(new BasicStone("probos_stone", "extraplanets", -1502));
+        r.register(new BasicStone("phobos_stone", "extraplanets", -1502));
         r.register(new BasicStone("callisto_stone", "extraplanets", -1505));
-        r.register(new BasicStone("ganymere_stone", "extraplanets", -1506));
+        r.register(new BasicStone("ganymede_stone", "extraplanets", -1506));
         r.register(new BasicStone("titan_stone", "extraplanets", -1508));
         r.register(new BasicStone("oberon_stone", "extraplanets", -1509));
         r.register(new BasicStone("iapetus_stone", "extraplanets", -1511));
@@ -101,8 +101,13 @@ public class Registry {
         // more planets stones
         r.register(new BasicStone("diona_stone", "moreplanets", -2542));
         r.register(new BasicStone("fronos_stone", "moreplanets", -2545));
-        r.register(new BasicStone("chalos_stone", "moreplanets", -2543));
-        r.register(new BasicStone("nibiru_stone", "moreplanets", -2544));
+        r.register(new BasicStone("chalos_rock", "moreplanets", -2543));
+        r.register(new BasicStone("nibiru_rock", "moreplanets", -2544));
+
+        // zollern galaxy stones
+        r.register(new BasicStone("altum", "zollerngalaxy", -7878, "altumstone"));
+        r.register(new BasicStone("atheon", "zollerngalaxy", -7998, "atheonstone"));
+        r.register(new BasicStone("caligro", "zollerngalaxy", -7877, "caligrostone"));
 
         // betweenlands stones
         r.register(new BasicStone("betweenstone", "thebetweenlands", Configuration.Conf.betweenland_id));

@@ -3,11 +3,11 @@ buildscript {
         jcenter()
         maven {
             name = "forge"
-            url = "http://files.minecraftforge.net/maven"
+            url = "http://maven.minecraftforge.net/"
         }
         maven {
-            name = "sonatype"
-            url = "https://oss.sonatype.org/content/repositories/snapshots/"
+            name = "forge alternative"
+            url = 'https://sizableshrimp.me/maven/'
         }
     }
     dependencies {
@@ -20,12 +20,16 @@ apply plugin: 'net.minecraftforge.gradle.forge'
 repositories {
     maven {
         // location of the maven that hosts JEI files
-        name = "Progwml6 maven"
-        url = "https://dvs1.progwml6.com/files/maven/"
+        name = 'Progwml6 maven'
+        url = 'https://dvs1.progwml6.com/files/maven/'
     }
     maven {
-        name "Crafttweaker Maven"
-        url "http://maven.blamejared.com/"
+        name = 'Crafttweaker Maven'
+        url = 'http://maven.blamejared.com/'
+    }
+    maven {
+        name = 'Atum Maven'
+        url = 'http://girafi.dk/maven/'
     }
 }
 
@@ -48,6 +52,7 @@ dependencies {
     compile "mezz.jei:jei_1.12.2:4.15.0.291"
     compile "CraftTweaker2:CraftTweaker2-MC1120-Main:1.12-4.1.20.626"
     compile "com.blamejared:MTLib:3.0.4.8"
+    compile "com.teammetallurgy.atum:atum2_1.12.2:1.12.2-2.0.20"
 }
 
 processResources
