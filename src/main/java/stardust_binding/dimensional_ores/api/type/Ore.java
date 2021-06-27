@@ -5,6 +5,7 @@ import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.registries.IForgeRegistryEntry;
 import org.apache.commons.lang3.StringUtils;
 import stardust_binding.dimensional_ores.DimensionalOres;
+import stardust_binding.dimensional_ores.config.OreData;
 
 import javax.annotation.Nonnull;
 
@@ -33,5 +34,9 @@ public class Ore extends IForgeRegistryEntry.Impl<Ore> implements IStringSeriali
             return "ore".concat("Aluminium");
         }
         return "";
+    }
+
+    public OreData getDefaultOreData() {
+        return new OreData(true, 1, 5, 5, 100, 4, 7);
     }
 }

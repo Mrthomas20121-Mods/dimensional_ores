@@ -9,7 +9,7 @@ import stardust_binding.dimensional_ores.api.type.BasicStone;
 import stardust_binding.dimensional_ores.api.type.Ore;
 import stardust_binding.dimensional_ores.api.type.Stone;
 import stardust_binding.dimensional_ores.config.Configuration;
-import stardust_binding.dimensional_ores.config.OreProperties;
+import stardust_binding.dimensional_ores.config.OreConfig;
 
 @Mod.EventBusSubscriber(modid = DimensionalOres.MODID)
 public class Registry {
@@ -37,7 +37,7 @@ public class Registry {
 
     @SubscribeEvent(priority = EventPriority.LOWEST)
     public static void registerStoneLowest(Events.PreEvent<Stone> event) {
-        OreProperties.init();
+        OreConfig.init();
     }
 
     @SubscribeEvent(priority = EventPriority.HIGHEST)

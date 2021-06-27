@@ -14,8 +14,8 @@ import stardust_binding.dimensional_ores.api.registry.Registries;
 import stardust_binding.dimensional_ores.api.type.Ore;
 import stardust_binding.dimensional_ores.api.type.Stone;
 import stardust_binding.dimensional_ores.block.OreBlock;
-import stardust_binding.dimensional_ores.config.Configuration;
-import stardust_binding.dimensional_ores.world.WorldGenOre;
+import stardust_binding.dimensional_ores.config.OreConfig;
+import stardust_binding.dimensional_ores.world.OreGen;
 
 import java.io.File;
 
@@ -47,12 +47,12 @@ public class DimensionalOres
         MinecraftForge.EVENT_BUS.post(new Events.PreEvent<>(new ResourceLocation(DimensionalOres.MODID, "stone"), Registries.STONE_REGISTRY));
         MinecraftForge.EVENT_BUS.post(new Events.PreEvent<>(new ResourceLocation(DimensionalOres.MODID, "ore"), Registries.ORE_REGISTRY));
 
-        Configuration.copyConfig(event);
+        OreConfig.createConfig(event);
 	}
 
     @Mod.EventHandler
     public void init(FMLInitializationEvent event){
-        GameRegistry.registerWorldGenerator(new WorldGenOre(), 500);
+        GameRegistry.registerWorldGenerator(new OreGen(), 500);
 
         for(Ore ore: Registries.getOreRegistry().getValuesCollection()) {
             for(Stone stone: Registries.getStoneRegistry().getValuesCollection()) {

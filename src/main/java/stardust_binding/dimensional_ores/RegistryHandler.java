@@ -18,7 +18,7 @@ import stardust_binding.dimensional_ores.api.registry.Registries;
 import stardust_binding.dimensional_ores.api.type.Ore;
 import stardust_binding.dimensional_ores.api.type.Stone;
 import stardust_binding.dimensional_ores.block.OreBlock;
-import stardust_binding.dimensional_ores.config.OreProperties;
+import stardust_binding.dimensional_ores.config.OreConfig;
 import stardust_binding.dimensional_ores.item.ItemBlockDim;
 
 import javax.annotation.Nonnull;
@@ -52,7 +52,10 @@ public class RegistryHandler {
             for(Stone stone: Registries.getStoneRegistry().getValuesCollection()) {
                 if(stone.getBlacklist().contains(ore.getName())) continue;
                 if(stone.isModLoaded()) {
-                    register(new OreBlock(ore, stone), event.getRegistry());
+                    // check if the ore is loaded for that stone
+                    if(OreConfig.getOreData(stone, ore).isEnabled()) {
+                        register(new OreBlock(ore, stone), event.getRegistry());
+                    }
                 }
             }
         }

@@ -6,7 +6,8 @@ import org.apache.commons.lang3.StringUtils;
 import stardust_binding.dimensional_ores.DimensionalOres;
 import stardust_binding.dimensional_ores.api.type.Ore;
 import stardust_binding.dimensional_ores.api.type.Stone;
-import stardust_binding.dimensional_ores.config.OreProperties;
+import stardust_binding.dimensional_ores.config.OreConfig;
+import stardust_binding.dimensional_ores.config.OreData;
 
 import javax.annotation.Nonnull;
 import java.util.HashMap;
@@ -21,7 +22,7 @@ public class OreBlock extends Block {
     }
 
     private final Ore ore;
-    private final OreProperties properties;
+    private final OreData properties;
     private final Stone stone;
 
     public OreBlock(Ore ore, Stone stone) {
@@ -32,11 +33,11 @@ public class OreBlock extends Block {
         this.setRegistryName(DimensionalOres.MODID, stone.getName().toLowerCase()+"_"+ore.getName()+"_ore");
         this.setTranslationKey(DimensionalOres.MODID+"."+stone.getName().toLowerCase()+"_"+ore.getName()+"_ore");
 
-        this.properties = OreProperties.getOreData(stone, ore);
+        this.properties = OreConfig.getOreData(stone, ore);
 
         this.setHardness(properties.getHardness());
-        this.setHarvestLevel("pickaxe", properties.getMininglevel());
-        this.setLightLevel(properties.getLightlevel());
+        this.setHarvestLevel("pickaxe", properties.getHarvestLevel());
+        this.setLightLevel(properties.getLightLevel());
 
         if(!table.containsKey(ore)) {
             table.put(ore, new LinkedHashMap<>());
@@ -54,7 +55,7 @@ public class OreBlock extends Block {
         return ore;
     }
 
-    public OreProperties getOreProperties() {
+    public OreData getOreProperties() {
         return properties;
     }
 

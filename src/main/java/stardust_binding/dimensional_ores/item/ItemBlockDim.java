@@ -7,7 +7,7 @@ import org.apache.commons.lang3.StringUtils;
 import stardust_binding.dimensional_ores.api.type.Ore;
 import stardust_binding.dimensional_ores.api.type.Stone;
 import stardust_binding.dimensional_ores.block.OreBlock;
-import stardust_binding.dimensional_ores.config.OreProperties;
+import stardust_binding.dimensional_ores.config.OreConfig;
 
 import javax.annotation.Nonnull;
 
@@ -15,7 +15,7 @@ public class ItemBlockDim extends ItemBlock {
 
     private final Stone stone;
     private final Ore ore;
-    private final OreProperties properties;
+    private final OreConfig properties;
 
     public ItemBlockDim(OreBlock block) {
         super(block);
@@ -36,7 +36,7 @@ public class ItemBlockDim extends ItemBlock {
         return ore;
     }
 
-    public OreProperties getOreProperties() {
+    public OreConfig getOreProperties() {
         return properties;
     }
 

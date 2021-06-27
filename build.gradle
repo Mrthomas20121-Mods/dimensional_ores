@@ -6,8 +6,8 @@ buildscript {
             url = "http://maven.minecraftforge.net/"
         }
         maven {
-            name = "forge alternative"
-            url = 'https://sizableshrimp.me/maven/'
+            name = "forge gradle 2.3 alternative"
+            url = "https://sizableshrimp.me/maven/"
         }
     }
     dependencies {
