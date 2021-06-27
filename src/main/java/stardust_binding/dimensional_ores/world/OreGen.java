@@ -9,7 +9,9 @@ import net.minecraftforge.fml.common.IWorldGenerator;
 import stardust_binding.dimensional_ores.api.registry.Registries;
 import stardust_binding.dimensional_ores.api.type.Ore;
 import stardust_binding.dimensional_ores.api.type.Stone;
+import stardust_binding.dimensional_ores.block.OreBlock;
 import stardust_binding.dimensional_ores.config.OreConfig;
+import stardust_binding.dimensional_ores.config.OreData;
 
 import javax.annotation.Nonnull;
 import java.util.Random;
@@ -28,10 +30,10 @@ public class OreGen implements IWorldGenerator {
     public void generate(Random random, int chunkX, int chunkZ, World world, IChunkGenerator chunkGenerator, IChunkProvider chunkProvider) {
         for(Stone stone: Registries.getStoneRegistry().getValuesCollection()) {
             for(Ore ore: Registries.getOreRegistry().getValuesCollection()) {
-                OreConfig properties = OreConfig.getOreData(stone, ore);
-                if(!properties.isEnabled()) continue;
+                OreData oreData = OreConfig.getOreData(stone, ore);
+                if(!oreData.isEnabled()) continue;
                 if(world.provider.getDimension() ==  stone.getDimensionId()) {
-                    //this.generateOre(OreBlock.get(ore, stone).getDefaultState(), stone.getPredicate(), world, random, chunkX, chunkZ, );
+                    this.generateOre(OreBlock.get(ore, stone).getDefaultState(), stone.getPredicate(), world, random, chunkX, chunkZ, oreData.getMinY(), oreData.getMaxY(), oreData.getSize(), oreData.getNumberToGenerate());
                 }
             }
         }
