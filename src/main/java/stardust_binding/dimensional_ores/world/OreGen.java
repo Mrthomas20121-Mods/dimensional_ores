@@ -15,10 +15,11 @@ import stardust_binding.dimensional_ores.config.OreData;
 
 import javax.annotation.Nonnull;
 import java.util.Random;
+import java.util.function.Predicate;
 
 public class OreGen implements IWorldGenerator {
 
-    private void generateOre(IBlockState ore, com.google.common.base.Predicate<IBlockState> stone, World world, @Nonnull Random random, int x, int z, int minY, int maxY, int size, int numberToGenerate) {
+    private void generateOre(IBlockState ore, Predicate<IBlockState> stone, World world, @Nonnull Random random, int x, int z, int minY, int maxY, int size, int numberToGenerate) {
         for (int i = 0; i < numberToGenerate; i++) {
             BlockPos pos = new BlockPos(x * 16 + random.nextInt(16), random.nextInt(maxY - minY) + minY, z * 16 + random.nextInt(16));
             DimWorldGenMinable generator = new DimWorldGenMinable(ore, stone, size);
@@ -30,10 +31,11 @@ public class OreGen implements IWorldGenerator {
     public void generate(Random random, int chunkX, int chunkZ, World world, IChunkGenerator chunkGenerator, IChunkProvider chunkProvider) {
         for(Stone stone: Registries.getStoneRegistry().getValuesCollection()) {
             for(Ore ore: Registries.getOreRegistry().getValuesCollection()) {
-                OreData oreData = OreConfig.getOreData(stone, ore);
-                if(!oreData.isEnabled()) continue;
-                if(world.provider.getDimension() ==  stone.getDimensionId()) {
-                    this.generateOre(OreBlock.get(ore, stone).getDefaultState(), stone.getPredicate(), world, random, chunkX, chunkZ, oreData.getMinY(), oreData.getMaxY(), oreData.getSize(), oreData.getNumberToGenerate());
+                if(!stone.getBlacklist().contains(ore.getName())) {
+                    OreData oreData = OreConfig.getOreData(stone, ore);
+                    if(world.provider.getDimension() ==  stone.getDimensionId() && oreData.isEnabled()) {
+                        this.generateOre(OreBlock.get(ore, stone).getDefaultState(), stone.getPredicate(), world, random, chunkX, chunkZ, oreData.getMinY(), oreData.getMaxY(), oreData.getSize(), oreData.getNumberToGenerate());
+                    }
                 }
             }
         }

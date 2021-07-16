@@ -1,13 +1,13 @@
 package stardust_binding.dimensional_ores.api.registry;
 
+import net.minecraft.block.Block;
+import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.eventhandler.EventPriority;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.registries.IForgeRegistry;
 import stardust_binding.dimensional_ores.DimensionalOres;
-import stardust_binding.dimensional_ores.api.type.BasicStone;
-import stardust_binding.dimensional_ores.api.type.Ore;
-import stardust_binding.dimensional_ores.api.type.Stone;
+import stardust_binding.dimensional_ores.api.type.*;
 import stardust_binding.dimensional_ores.config.Configuration;
 import stardust_binding.dimensional_ores.config.OreConfig;
 
@@ -33,11 +33,59 @@ public class Registry {
         r.register(new Ore("tungsten"));
         r.register(new Ore("osmium"));
         r.register(new Ore("uranium"));
+        r.register(new Ore("pyrope"));
+        r.register(new Ore("coral"));
+        r.register(new Ore("sunstone"));
+        r.register(new Ore("zircon"));
+        r.register(new Ore("jade"));
+        r.register(new Ore("chrysoprase"));
+        r.register(new Ore("fluorite"));
+        r.register(new Ore("kyanite"));
+        r.register(new Ore("sodalite"));
+        r.register(new Ore("ammolite"));
+        r.register(new Ore("kunzite"));
+        r.register(new Ore("rose_quartz"));
+        r.register(new Ore("tektite"));
+        r.register(new Ore("pearl"));
+        r.register(new Ore("carnelian"));
+        r.register(new Ore("spinel"));
+        r.register(new Ore("citrine"));
+        r.register(new Ore("jasper"));
+        r.register(new Ore("golden_beryl"));
+        r.register(new Ore("moldavite"));
+        r.register(new Ore("malachite"));
+        r.register(new Ore("turquoise"));
+        r.register(new Ore("moonstone"));
+        r.register(new Ore("blue_topaz"));
+        r.register(new Ore("tanzanite"));
+        r.register(new Ore("violet_sapphire"));
+        r.register(new Ore("lepidolite"));
+        r.register(new Ore("ametrine"));
+        r.register(new Ore("black_diamond"));
+        r.register(new Ore("alexandrite"));
+        r.register(new Ore("ruby"));
+        r.register(new Ore("garnet"));
+        r.register(new Ore("topaz"));
+        r.register(new Ore("amber"));
+        r.register(new Ore("heliodor"));
+        r.register(new Ore("peridot"));
+        r.register(new Ore("green_sapphire"));
+        r.register(new Ore("indicolite"));
+        r.register(new Ore("aquamarine"));
+        r.register(new Ore("sapphire"));
+        r.register(new Ore("iolite"));
+        r.register(new Ore("amethyst"));
+        r.register(new Ore("agate"));
+        r.register(new Ore("morganite"));
+        r.register(new Ore("onyx"));
+        r.register(new Ore("opal"));
     }
 
-    @SubscribeEvent(priority = EventPriority.LOWEST)
-    public static void registerStoneLowest(Events.PreEvent<Stone> event) {
-        OreConfig.init();
+    @SubscribeEvent(priority = EventPriority.HIGHEST)
+    public static void registerBlock(RegistryEvent.Register<Block> event) {
+        // create the config if it doesn't exists then load it
+        OreConfig.createConfig();
+        OreConfig.init(DimensionalOres.config);
     }
 
     @SubscribeEvent(priority = EventPriority.HIGHEST)
@@ -71,32 +119,32 @@ public class Registry {
         r.register(new BasicStone("lunar_stone", "blue_skies", Configuration.Conf.everdawn_id));
 
         // galacticraft stones
-        r.register(new BasicStone("moon_rock", "galacticraftcore", Configuration.Conf.galacticraft_moon_id, "basic_block_moon"));
-        r.register(new BasicStone("mars_stone", "galacticraftplanets", Configuration.Conf.galacticraft_mars_id, "mars"));
-        r.register(new BasicStone("venus_stone", "galacticraftplanets", Configuration.Conf.galacticraft_venus_id, "venus"));
-        r.register(new BasicStone("asteroids_rock", "galacticraftplanets", Configuration.Conf.galacticraft_asteroids_id, "asteroids_block"));
+        r.register(new GalacticraftStone("moon_rock", "galacticraftcore", Configuration.Conf.galacticraft_moon_id, "basic_block_moon"));
+        r.register(new GalacticraftStone("mars_stone", "galacticraftplanets", Configuration.Conf.galacticraft_mars_id, "mars"));
+        r.register(new GalacticraftStone("venus_stone", "galacticraftplanets", Configuration.Conf.galacticraft_venus_id, "venus"));
+        r.register(new GalacticraftStone("asteroids_rock", "galacticraftplanets", Configuration.Conf.galacticraft_asteroids_id, "asteroids_block"));
 
         // extra planets stones
-        r.register(new BasicStone("mercury_stone", "extraplanets", -13));
-        r.register(new BasicStone("triton_stone", "extraplanets", -1504));
-        r.register(new BasicStone("titania_stone", "extraplanets", -1510));
-        r.register(new BasicStone("jupiter_stone", "extraplanets", -15));
-        r.register(new BasicStone("saturn_stone", "extraplanets", -16));
-        r.register(new BasicStone("neptune_stone", "extraplanets", -18));
-        r.register(new BasicStone("ceres_stone", "extraplanets", -20));
-        r.register(new BasicStone("kepler22b_stone", "extraplanets", -21));
-        r.register(new BasicStone("eris_stone", "extraplanets", -22));
-        r.register(new BasicStone("uranus_stone", "extraplanets", -21));
-        r.register(new BasicStone("europa_stone", "extraplanets", -1501));
-        r.register(new BasicStone("io_stone", "extraplanets", -1500));
-        r.register(new BasicStone("deimos_stone", "extraplanets", -1503));
-        r.register(new BasicStone("phobos_stone", "extraplanets", -1502));
-        r.register(new BasicStone("callisto_stone", "extraplanets", -1505));
-        r.register(new BasicStone("ganymede_stone", "extraplanets", -1506));
-        r.register(new BasicStone("titan_stone", "extraplanets", -1508));
-        r.register(new BasicStone("oberon_stone", "extraplanets", -1509));
-        r.register(new BasicStone("iapetus_stone", "extraplanets", -1511));
-        r.register(new BasicStone("rhea_stone", "extraplanets", -1507));
+        r.register(new ExtraPlanetStone("mercury_stone", "extraplanets", -13));
+        r.register(new ExtraPlanetStone("triton_stone", "extraplanets", -1504));
+        r.register(new ExtraPlanetStone("titania_stone", "extraplanets", -1510));
+        r.register(new ExtraPlanetStone("jupiter_stone", "extraplanets", -15));
+        r.register(new ExtraPlanetStone("saturn_stone", "extraplanets", -16));
+        r.register(new ExtraPlanetStone("neptune_stone", "extraplanets", -18));
+        r.register(new ExtraPlanetStone("ceres_stone", "extraplanets", -20));
+        r.register(new ExtraPlanetStone("kepler22b_stone", "extraplanets", -21));
+        r.register(new ExtraPlanetStone("eris_stone", "extraplanets", -22));
+        r.register(new ExtraPlanetStone("uranus_stone", "extraplanets", -21));
+        r.register(new ExtraPlanetStone("europa_stone", "extraplanets", -1501));
+        r.register(new ExtraPlanetStone("io_stone", "extraplanets", -1500));
+        r.register(new ExtraPlanetStone("deimos_stone", "extraplanets", -1503));
+        r.register(new ExtraPlanetStone("phobos_stone", "extraplanets", -1502));
+        r.register(new ExtraPlanetStone("callisto_stone", "extraplanets", -1505));
+        r.register(new ExtraPlanetStone("ganymede_stone", "extraplanets", -1506));
+        r.register(new ExtraPlanetStone("titan_stone", "extraplanets", -1508));
+        r.register(new ExtraPlanetStone("oberon_stone", "extraplanets", -1509));
+        r.register(new ExtraPlanetStone("iapetus_stone", "extraplanets", -1511));
+        r.register(new ExtraPlanetStone("rhea_stone", "extraplanets", -1507));
 
         // more planets stones
         r.register(new BasicStone("diona_stone", "moreplanets", -2542));

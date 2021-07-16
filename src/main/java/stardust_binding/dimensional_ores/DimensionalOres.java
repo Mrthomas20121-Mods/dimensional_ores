@@ -32,22 +32,21 @@ public class DimensionalOres
 
     private static Logger logger;
 
+    public static File config;
+
     public static Logger getLogger() {
         return logger;
     }
-
-    public static File config;
 
     @Mod.EventHandler
     public void preInit(FMLPreInitializationEvent event)
     {
         logger = event.getModLog();
-        config = event.getModConfigurationDirectory();
         MinecraftForge.EVENT_BUS.register(this);
-        MinecraftForge.EVENT_BUS.post(new Events.PreEvent<>(new ResourceLocation(DimensionalOres.MODID, "stone"), Registries.STONE_REGISTRY));
-        MinecraftForge.EVENT_BUS.post(new Events.PreEvent<>(new ResourceLocation(DimensionalOres.MODID, "ore"), Registries.ORE_REGISTRY));
+        config = event.getModConfigurationDirectory();
 
-        OreConfig.createConfig(event);
+        MinecraftForge.EVENT_BUS.post(new Events.PreEvent<>(new ResourceLocation(DimensionalOres.MODID, "stone"), Registries.STONE_REGISTRY, event.getModConfigurationDirectory()));
+        MinecraftForge.EVENT_BUS.post(new Events.PreEvent<>(new ResourceLocation(DimensionalOres.MODID, "ore"), Registries.ORE_REGISTRY, event.getModConfigurationDirectory()));
 	}
 
     @Mod.EventHandler
@@ -56,8 +55,12 @@ public class DimensionalOres
 
         for(Ore ore: Registries.getOreRegistry().getValuesCollection()) {
             for(Stone stone: Registries.getStoneRegistry().getValuesCollection()) {
-                OreDictionary.registerOre(ore.getOreDict(), OreBlock.get(ore, stone));
-                if(!ore.getAlternativeOredict().equals("")) OreDictionary.registerOre(ore.getAlternativeOredict(), OreBlock.get(ore, stone));
+                if(!stone.getBlacklist().contains(ore.getName())) {
+                    if(OreConfig.getOreData(stone, ore).isEnabled()) {
+                        OreDictionary.registerOre(ore.getOreDict(), OreBlock.get(ore, stone));
+                        if(!ore.getAlternativeOredict().equals("")) OreDictionary.registerOre(ore.getAlternativeOredict(), OreBlock.get(ore, stone));
+                    }
+                }
             }
         }
     }

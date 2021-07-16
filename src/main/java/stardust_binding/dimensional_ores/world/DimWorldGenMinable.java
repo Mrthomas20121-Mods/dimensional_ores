@@ -6,22 +6,24 @@ import net.minecraft.util.math.MathHelper;
 import net.minecraft.world.World;
 import net.minecraft.world.gen.feature.WorldGenerator;
 
+import javax.annotation.Nonnull;
 import java.util.Random;
+import java.util.function.Predicate;
 
 public class DimWorldGenMinable extends WorldGenerator {
 
     private final IBlockState oreBlock;
-    private final com.google.common.base.Predicate<IBlockState> stone;
+    private final Predicate<IBlockState> stone;
     private final int blockCount;
 
-    public DimWorldGenMinable(IBlockState block, com.google.common.base.Predicate<IBlockState> stone, int blockCount) {
+    public DimWorldGenMinable(IBlockState block, Predicate<IBlockState> stone, int blockCount) {
         this.oreBlock = block;
         this.stone = stone;
         this.blockCount = blockCount;
 
     }
 
-    public boolean generate(World worldIn, Random rand, BlockPos position) {
+    public boolean generate(@Nonnull World worldIn, @Nonnull Random rand, @Nonnull BlockPos position) {
         float f = rand.nextFloat() * (float) Math.PI;
         double d0 = (double) ((float) (position.getX() + 8) + MathHelper.sin(f) * (float) this.blockCount / 8.0F);
         double d1 = (double) ((float) (position.getX() + 8) - MathHelper.sin(f) * (float) this.blockCount / 8.0F);
@@ -60,7 +62,7 @@ public class DimWorldGenMinable extends WorldGenerator {
                                     BlockPos blockpos = new BlockPos(l1, i2, j2);
 
                                     IBlockState state = worldIn.getBlockState(blockpos);
-                                    if (state.getBlock().isReplaceableOreGen(state, worldIn, blockpos, this.stone)) {
+                                    if (this.stone.test(state)) {
                                         worldIn.setBlockState(blockpos, this.oreBlock, 2);
                                     }
                                 }

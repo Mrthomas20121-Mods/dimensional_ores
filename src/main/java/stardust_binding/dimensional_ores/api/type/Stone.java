@@ -1,8 +1,7 @@
 package stardust_binding.dimensional_ores.api.type;
 
-import com.google.common.base.Predicate;
 import net.minecraft.block.Block;
-import net.minecraft.block.material.Material;
+import net.minecraft.block.properties.PropertyBool;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.util.IStringSerializable;
 import net.minecraft.util.ResourceLocation;
@@ -12,9 +11,11 @@ import net.minecraftforge.registries.IForgeRegistryEntry;
 import stardust_binding.dimensional_ores.DimensionalOres;
 import stardust_binding.dimensional_ores.compat.ExtraPlanetCompat;
 import stardust_binding.dimensional_ores.compat.GalacticraftCompat;
+import stardust_binding.dimensional_ores.compat.IModCompat;
 
 import javax.annotation.Nonnull;
 import java.util.ArrayList;
+import java.util.function.Predicate;
 
 public abstract class Stone extends IForgeRegistryEntry.Impl<Stone> implements IStringSerializable {
 
@@ -55,14 +56,11 @@ public abstract class Stone extends IForgeRegistryEntry.Impl<Stone> implements I
     }
 
     protected IBlockState getBlockState() {
-        Block block = ForgeRegistries.BLOCKS.getValue(new ResourceLocation(this.getModId(), this.getBlockName()));
-        if(getModId().toLowerCase().contains("galacticraft")) {
-            return GalacticraftCompat.INSTANCE.getStone(this, block.getDefaultState());
-        }
-        else if(getModId().toLowerCase().equals("extraplanets")) {
-            return ExtraPlanetCompat.INSTANCE.getStone(this, block.getDefaultState());
-        }
-        return block.getDefaultState();
+        return ForgeRegistries.BLOCKS.getValue(new ResourceLocation(this.getModId(), this.getBlockName())).getDefaultState();
+    }
+
+    public IBlockState getStateWithProperties(IBlockState state, IModCompat compat) {
+        return compat.getStone(this.getName(), state);
     }
 
     @Nonnull

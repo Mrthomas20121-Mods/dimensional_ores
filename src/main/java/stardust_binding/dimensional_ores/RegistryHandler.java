@@ -48,6 +48,7 @@ public class RegistryHandler {
 
     @SubscribeEvent
     public static void registerBlocks(RegistryEvent.Register<Block> event) {
+        DimensionalOres.getLogger().info(OreConfig.getOres().toString());
         for(Ore ore: Registries.getOreRegistry().getValuesCollection()) {
             for(Stone stone: Registries.getStoneRegistry().getValuesCollection()) {
                 if(stone.getBlacklist().contains(ore.getName())) continue;

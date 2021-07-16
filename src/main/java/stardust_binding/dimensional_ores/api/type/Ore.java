@@ -37,6 +37,6 @@ public class Ore extends IForgeRegistryEntry.Impl<Ore> implements IStringSeriali
     }
 
     public OreData getDefaultOreData() {
-        return new OreData(true, 1, 5, 5, 100, 4, 7);
+        return new OreData(true, 1, 5, 5, 60, 4, 7);
     }
 }

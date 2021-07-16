@@ -38,7 +38,7 @@ public class OreData {
     }
 
     public OreData(boolean enabled, int harvestLevel, int hardness, int minY, int maxY, int size, int numberToGenerate) {
-
+        this(enabled, 0, harvestLevel, hardness, minY, maxY, size, numberToGenerate);
     }
 
     public boolean isEnabled() {

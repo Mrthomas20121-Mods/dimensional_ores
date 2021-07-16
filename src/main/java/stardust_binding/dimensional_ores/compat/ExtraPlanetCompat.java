@@ -1,23 +1,21 @@
 package stardust_binding.dimensional_ores.compat;
 
 import com.mjr.extraplanets.blocks.planetAndMoonBlocks.*;
-import net.minecraft.block.Block;
 import net.minecraft.block.state.*;
-import stardust_binding.dimensional_ores.api.type.Stone;
 
 public enum ExtraPlanetCompat implements IModCompat {
 
     INSTANCE;
 
     @Override
-    public IBlockState getStone(Stone stone, IBlockState state) {
+    public IBlockState getStone(String stone, IBlockState state) {
 
-        switch (stone.getName()) {
+        switch (stone) {
             case "io_stone":
                 return state.withProperty(BlockBasicIo.BASIC_TYPE, BlockBasicIo.EnumBlockBasic.STONE);
             case "deimos_stone":
                 return state.withProperty(BlockBasicDeimos.BASIC_TYPE, BlockBasicDeimos.EnumBlockBasic.STONE);
-            case "EUROPA_STONE":
+            case "europa_stone":
                 return state.withProperty(BlockBasicEuropa.BASIC_TYPE, BlockBasicEuropa.EnumBlockBasic.STONE);
             case "oberon_stone":
                 return state.withProperty(BlockBasicOberon.BASIC_TYPE, BlockBasicOberon.EnumBlockBasic.STONE);
