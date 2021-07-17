@@ -21,6 +21,9 @@ public class Configuration {
     @Config(modid = DimensionalOres.MODID, name = DimensionalOres.MODID+"/"+DimensionalOres.MODID)
     public static class Conf {
 
+        @Config.Comment("Should the mod add Furnace Recipes for the ores?")
+        public static boolean generateFurnaceRecipes = true;
+
         @Config.Comment("Default Dimension ID for Aether")
         public static int aether_id = 4;
 

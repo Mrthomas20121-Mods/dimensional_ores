@@ -1,67 +1,213 @@
 itemGroup.dim_ores=Dimensional Ores
-
-# stones
+# aluminum
+dimensional_ores.ore.aluminum=Aluminum Ore
+# apatite
+dimensional_ores.ore.apatite=Apatite Ore
+# ardite
+dimensional_ores.ore.ardite=Ardite Ore
+# certus_quartz
+dimensional_ores.ore.certus_quartz=Certus Quartz Ore
+# cobalt
+dimensional_ores.ore.cobalt=Cobalt Ore
+# copper
+dimensional_ores.ore.copper=Copper Ore
+# draconium
+dimensional_ores.ore.draconium=Draconium Ore
+# lead
+dimensional_ores.ore.lead=Lead Ore
+# nickel
+dimensional_ores.ore.nickel=Nickel Ore
+# platinum
+dimensional_ores.ore.platinum=Platinum Ore
+# silver
+dimensional_ores.ore.silver=Silver Ore
+# tin
+dimensional_ores.ore.tin=Tin Ore
+# tungsten
+dimensional_ores.ore.tungsten=Tungsten Ore
+# osmium
+dimensional_ores.ore.osmium=Osmium Ore
+# uranium
+dimensional_ores.ore.uranium=Uranium Ore
+# pyrope
+dimensional_ores.ore.pyrope=Pyrope Ore
+# coral
+dimensional_ores.ore.coral=Coral Ore
+# sunstone
+dimensional_ores.ore.sunstone=Sunstone Ore
+# zircon
+dimensional_ores.ore.zircon=Zircon Ore
+# jade
+dimensional_ores.ore.jade=Jade Ore
+# chrysoprase
+dimensional_ores.ore.chrysoprase=Chrysoprase Ore
+# fluorite
+dimensional_ores.ore.fluorite=Fluorite Ore
+# kyanite
+dimensional_ores.ore.kyanite=Kyanite Ore
+# sodalite
+dimensional_ores.ore.sodalite=Sodalite Ore
+# ammolite
+dimensional_ores.ore.ammolite=Ammolite Ore
+# kunzite
+dimensional_ores.ore.kunzite=Kunzite Ore
+# rose_quartz
+dimensional_ores.ore.rose_quartz=Rose Quartz Ore
+# tektite
+dimensional_ores.ore.tektite=Tektite Ore
+# pearl
+dimensional_ores.ore.pearl=Pearl Ore
+# carnelian
+dimensional_ores.ore.carnelian=Carnelian Ore
+# spinel
+dimensional_ores.ore.spinel=Spinel Ore
+# citrine
+dimensional_ores.ore.citrine=Citrine Ore
+# jasper
+dimensional_ores.ore.jasper=Jasper Ore
+# golden_beryl
+dimensional_ores.ore.golden_beryl=Golden Beryl Ore
+# moldavite
+dimensional_ores.ore.moldavite=Moldavite Ore
+# malachite
+dimensional_ores.ore.malachite=Malachite Ore
+# turquoise
+dimensional_ores.ore.turquoise=Turquoise Ore
+# moonstone
+dimensional_ores.ore.moonstone=Moonstone Ore
+# blue_topaz
+dimensional_ores.ore.blue_topaz=Blue Topaz Ore
+# tanzanite
+dimensional_ores.ore.tanzanite=Tanzanite Ore
+# violet_sapphire
+dimensional_ores.ore.violet_sapphire=Violet Sapphire Ore
+# lepidolite
+dimensional_ores.ore.lepidolite=Lepidolite Ore
+# ametrine
+dimensional_ores.ore.ametrine=Ametrine Ore
+# black_diamond
+dimensional_ores.ore.black_diamond=Black Diamond Ore
+# alexandrite
+dimensional_ores.ore.alexandrite=Alexandrite Ore
+# ruby
+dimensional_ores.ore.ruby=Ruby Ore
+# garnet
+dimensional_ores.ore.garnet=Garnet Ore
+# topaz
+dimensional_ores.ore.topaz=Topaz Ore
+# amber
+dimensional_ores.ore.amber=Amber Ore
+# heliodor
+dimensional_ores.ore.heliodor=Heliodor Ore
+# peridot
+dimensional_ores.ore.peridot=Peridot Ore
+# green_sapphire
+dimensional_ores.ore.green_sapphire=Green Sapphire Ore
+# indicolite
+dimensional_ores.ore.indicolite=Indicolite Ore
+# aquamarine
+dimensional_ores.ore.aquamarine=Aquamarine Ore
+# sapphire
+dimensional_ores.ore.sapphire=Sapphire Ore
+# iolite
+dimensional_ores.ore.iolite=Iolite Ore
+# amethyst
+dimensional_ores.ore.amethyst=Amethyst Ore
+# agate
+dimensional_ores.ore.agate=Agate Ore
+# morganite
+dimensional_ores.ore.morganite=Morganite Ore
+# onyx
+dimensional_ores.ore.onyx=Onyx Ore
+# opal
+dimensional_ores.ore.opal=Opal Ore
+# holystone
 dimensional_ores.stone.holystone=Holystone
+# limestone
 dimensional_ores.stone.limestone=Limestone
-dimensional_ores.stone.foggy_stone=Foggy_stone
+# foggy_stone
+dimensional_ores.stone.foggy_stone=Foggy Stone
+# umberstone
 dimensional_ores.stone.umberstone=Umberstone
+# trenchstone
 dimensional_ores.stone.trenchstone=Trenchstone
+# nightstone
 dimensional_ores.stone.nightstone=Nightstone
-dimensional_ores.stone.abyss_stone=Abyss_stone
-dimensional_ores.stone.turquoise_stone=Turquoise_stone
-dimensional_ores.stone.lunar_stone=Lunar_stone
-dimensional_ores.stone.gaia_stone=Gaia_stone
-dimensional_ores.stone.moon_rock=Moon_rock
-dimensional_ores.stone.mars_stone=Mars_stone
-dimensional_ores.stone.asteroids_rock=Asteroids_rock
-dimensional_ores.stone.venus_stone=Venus_stone
-dimensional_ores.stone.triton_stone=Triton_stone
-dimensional_ores.stone.titania_stone=Titania_stone
-dimensional_ores.stone.jupiter_stone=Jupiter_stone
-dimensional_ores.stone.saturn_stone=Saturn_stone
-dimensional_ores.stone.neptune_stone=Neptune_stone
-dimensional_ores.stone.ceres_stone=Ceres_stone
-dimensional_ores.stone.kepler22b_stone=Kepler22b_stone
-dimensional_ores.stone.eris_stone=Eris_stone
-dimensional_ores.stone.mercury_stone=Mercury_stone
-dimensional_ores.stone.titan_stone=Titan_stone
-dimensional_ores.stone.europa_stone=Europa_stone
-dimensional_ores.stone.io_stone=Io_stone
-dimensional_ores.stone.deimos_stone=Deimos_stone
-dimensional_ores.stone.phobos_stone=Phobos_stone
-dimensional_ores.stone.callisto_stone=Callisto_stone
-dimensional_ores.stone.ganymede_stone=Ganymede_stone
-dimensional_ores.stone.oberon_stone=Oberon_stone
-dimensional_ores.stone.iapetus_stone=Iapetus_stone
-dimensional_ores.stone.rhea_stone=Rhea_stone
-dimensional_ores.stone.diona_rock=Diona_rock
-dimensional_ores.stone.fronos_stone=Fronos_stone
-dimensional_ores.stone.chalos_rock=Chalos_rock
-dimensional_ores.stone.nibiru_rock=Nibiru_rock
+# abyss_stone
+dimensional_ores.stone.abyss_stone=Abyss Stone
+# gaia_stone
+dimensional_ores.stone.gaia_stone=Gaia Stone
+# turquoise_stone
+dimensional_ores.stone.turquoise_stone=Turquoise Stone
+# lunar_stone
+dimensional_ores.stone.lunar_stone=Lunar Stone
+# moon_rock
+dimensional_ores.stone.moon_rock=Moon Rock
+# mars_stone
+dimensional_ores.stone.mars_stone=Mars Stone
+# venus_stone
+dimensional_ores.stone.venus_stone=Venus Stone
+# asteroids_rock
+dimensional_ores.stone.asteroids_rock=Asteroids Rock
+# mercury_stone
+dimensional_ores.stone.mercury_stone=Mercury Stone
+# triton_stone
+dimensional_ores.stone.triton_stone=Triton Stone
+# titania_stone
+dimensional_ores.stone.titania_stone=Titania Stone
+# jupiter_stone
+dimensional_ores.stone.jupiter_stone=Jupiter Stone
+# saturn_stone
+dimensional_ores.stone.saturn_stone=Saturn Stone
+# neptune_stone
+dimensional_ores.stone.neptune_stone=Neptune Stone
+# ceres_stone
+dimensional_ores.stone.ceres_stone=Ceres Stone
+# kepler22b_stone
+dimensional_ores.stone.kepler22b_stone=Kepler22b Stone
+# eris_stone
+dimensional_ores.stone.eris_stone=Eris Stone
+# uranus_stone
+dimensional_ores.stone.uranus_stone=Uranus Stone
+# europe_stone
+dimensional_ores.stone.europe_stone=Europe Stone
+# io_stone
+dimensional_ores.stone.io_stone=Io Stone
+# deimos_stone
+dimensional_ores.stone.deimos_stone=Deimos Stone
+# phobos_stone
+dimensional_ores.stone.phobos_stone=Phobos Stone
+# callisto_stone
+dimensional_ores.stone.callisto_stone=Callisto Stone
+# ganymede_stone
+dimensional_ores.stone.ganymede_stone=Ganymede Stone
+# titan_stone
+dimensional_ores.stone.titan_stone=Titan Stone
+# oberon_stone
+dimensional_ores.stone.oberon_stone=Oberon Stone
+# iapetus_stone
+dimensional_ores.stone.iapetus_stone=Iapetus Stone
+# rhea_stone
+dimensional_ores.stone.rhea_stone=Rhea Stone
+# diona_stone
+dimensional_ores.stone.diona_stone=Diona Stone
+# fronos_stone
+dimensional_ores.stone.fronos_stone=Fronos Stone
+# chalos_rock
+dimensional_ores.stone.chalos_rock=Chalos Rock
+# nibiru_rock
+dimensional_ores.stone.nibiru_rock=Nibiru Rock
+# altum
+dimensional_ores.stone.altum=Altum
+# atheon
+dimensional_ores.stone.atheon=Atheon
+# caligro
+dimensional_ores.stone.caligro=Caligro
+# betweenstone
 dimensional_ores.stone.betweenstone=Betweenstone
+# pitstone
 dimensional_ores.stone.pitstone=Pitstone
+# aurorianstone
 dimensional_ores.stone.aurorianstone=Aurorianstone
-dimensional_ores.stone.frozen_antinatric_stone=Frozen_antinatric_stone
-dimensional_ores.stone.kriffstone=Kriffstone
-dimensional_ores.stone.edenrock=Edenrock
-dimensional_ores.stone.oasis=Oasis
-dimensional_ores.stone.purgot=Purgot
-dimensional_ores.stone.zolstone=Zolstone
-dimensional_ores.stone.xantheon=Xantheon
-dimensional_ores.stone.xanthian=Xanthian
-
-# ores
-dimensional_ores.ore.apatite=Apatite
-dimensional_ores.ore.ardite=Ardite
-dimensional_ores.ore.aluminum=Aluminum
-dimensional_ores.ore.certus_quartz=Certus_quartz
-dimensional_ores.ore.cobalt=Cobalt
-dimensional_ores.ore.copper=Copper
-dimensional_ores.ore.draconium=Draconium
-dimensional_ores.ore.lead=Lead
-dimensional_ores.ore.nickel=Nickel
-dimensional_ores.ore.platinum=Platinum
-dimensional_ores.ore.silver=Silver
-dimensional_ores.ore.tin=Tin
-dimensional_ores.ore.osmium=Osmium
-dimensional_ores.ore.uranium=Uranium
+# frozen_antimatic_stone
+dimensional_ores.stone.frozen_antimatic_stone=Frozen Antimatic Stone

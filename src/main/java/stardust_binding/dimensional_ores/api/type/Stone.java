@@ -1,7 +1,5 @@
 package stardust_binding.dimensional_ores.api.type;
 
-import net.minecraft.block.Block;
-import net.minecraft.block.properties.PropertyBool;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.util.IStringSerializable;
 import net.minecraft.util.ResourceLocation;
@@ -9,8 +7,6 @@ import net.minecraftforge.fml.common.Loader;
 import net.minecraftforge.fml.common.registry.ForgeRegistries;
 import net.minecraftforge.registries.IForgeRegistryEntry;
 import stardust_binding.dimensional_ores.DimensionalOres;
-import stardust_binding.dimensional_ores.compat.ExtraPlanetCompat;
-import stardust_binding.dimensional_ores.compat.GalacticraftCompat;
 import stardust_binding.dimensional_ores.compat.IModCompat;
 
 import javax.annotation.Nonnull;

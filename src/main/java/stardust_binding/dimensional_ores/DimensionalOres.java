@@ -1,5 +1,7 @@
 package stardust_binding.dimensional_ores;
 
+import net.minecraft.item.ItemStack;
+import net.minecraft.util.NonNullList;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.fml.common.Mod;
@@ -14,6 +16,7 @@ import stardust_binding.dimensional_ores.api.registry.Registries;
 import stardust_binding.dimensional_ores.api.type.Ore;
 import stardust_binding.dimensional_ores.api.type.Stone;
 import stardust_binding.dimensional_ores.block.OreBlock;
+import stardust_binding.dimensional_ores.config.Configuration;
 import stardust_binding.dimensional_ores.config.OreConfig;
 import stardust_binding.dimensional_ores.world.OreGen;
 
@@ -55,10 +58,27 @@ public class DimensionalOres
 
         for(Ore ore: Registries.getOreRegistry().getValuesCollection()) {
             for(Stone stone: Registries.getStoneRegistry().getValuesCollection()) {
-                if(!stone.getBlacklist().contains(ore.getName())) {
+                if(!stone.getBlacklist().contains(ore.getName()) && stone.isModLoaded()) {
                     if(OreConfig.getOreData(stone, ore).isEnabled()) {
-                        OreDictionary.registerOre(ore.getOreDict(), OreBlock.get(ore, stone));
-                        if(!ore.getAlternativeOredict().equals("")) OreDictionary.registerOre(ore.getAlternativeOredict(), OreBlock.get(ore, stone));
+                        OreBlock oreBlock = OreBlock.get(ore, stone);
+                        OreDictionary.registerOre(ore.getOreDict(), oreBlock);
+                        if(!ore.getAlternativeOredict().equals("")) OreDictionary.registerOre(ore.getAlternativeOredict(), oreBlock);
+                        if(Configuration.Conf.generateFurnaceRecipes) {
+                            String ingot = ore.getIngotOredict();
+                            String gem = ore.getGemOredict();
+                            NonNullList<ItemStack> ingotItems = OreDictionary.getOres(ingot);
+                            NonNullList<ItemStack> gemItems = OreDictionary.getOres(gem);
+                            ItemStack output = ItemStack.EMPTY;
+                            if(!ingotItems.isEmpty()) {
+                                output = ingotItems.get(0);
+                                output.setCount(1);
+                            }
+                            else if(!gemItems.isEmpty()) {
+                                output = gemItems.get(0);
+                                output.setCount(1);
+                            }
+                            GameRegistry.addSmelting(new ItemStack(oreBlock, 1), output, 1);
+                        }
                     }
                 }
             }

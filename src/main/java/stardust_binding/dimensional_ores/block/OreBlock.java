@@ -2,14 +2,12 @@ package stardust_binding.dimensional_ores.block;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
-import org.apache.commons.lang3.StringUtils;
 import stardust_binding.dimensional_ores.DimensionalOres;
 import stardust_binding.dimensional_ores.api.type.Ore;
 import stardust_binding.dimensional_ores.api.type.Stone;
 import stardust_binding.dimensional_ores.config.OreConfig;
 import stardust_binding.dimensional_ores.config.OreData;
 
-import javax.annotation.Nonnull;
 import java.util.HashMap;
 import java.util.LinkedHashMap;
 
@@ -43,12 +41,6 @@ public class OreBlock extends Block {
             table.put(ore, new LinkedHashMap<>());
         }
         table.get(ore).put(stone, this);
-    }
-
-    @Nonnull
-    @Override
-    public String getLocalizedName() {
-        return String.format("%s %s %s", StringUtils.capitalize(stone.getName()), StringUtils.capitalize(ore.getName()), "Ore");
     }
 
     public Ore getOre() {

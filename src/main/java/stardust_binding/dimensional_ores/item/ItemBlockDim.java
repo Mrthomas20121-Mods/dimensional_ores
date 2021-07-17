@@ -43,7 +43,7 @@ public class ItemBlockDim extends ItemBlock {
     @Nonnull
     public String getItemStackDisplayName(@Nonnull ItemStack stack)
     {
-        return String.format("%s %s %s", new TextComponentTranslation(stone.getTranslationKey()).getFormattedText(), new TextComponentTranslation(ore.getTranslationKey()).getFormattedText(), "Ore");
+        return String.format("%s %s", new TextComponentTranslation(stone.getTranslationKey()).getFormattedText(), new TextComponentTranslation(ore.getTranslationKey()).getFormattedText());
     }
 
     /**
