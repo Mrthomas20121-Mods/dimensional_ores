@@ -68,6 +68,85 @@ public class Configuration {
 
         @Config.Comment("Default Dimension ID for Galacticraft Venus")
         public static int galacticraft_venus_id = -31;
+		
+		@Config.Comment("Default Dimension ID for Moreplanets Chalos")
+		public static int chalos_id=-2543
+
+		@Config.Comment("Default Dimension ID for Moreplanets Diona")
+		public static int diona_id=-2542
+
+		@Config.Comment("Default Dimension ID for Moreplanets Fronos")
+		public static int fronos_id=-2545
+
+		@Config.Comment("Default Dimension ID for Moreplanets Koentus")
+		public static int koentus_id=-2642
+
+		@Config.Comment("Default Dimension ID for Moreplanets Nibiru")
+		public static int nibiru_id=-2544
+		
+		@Config.Comment("Default Dimension ID for Extraplanets Callisto")
+		public static int callisto_id=-1505
+
+		@Config.Comment("Default Dimension ID for Extraplanets Ceres")
+		public static int ceres_id=-20
+
+		@Config.Comment("Default Dimension ID for Extraplanets Deimos")
+		public static int deimos_id=-1503
+
+		@Config.Comment("Default Dimension ID for Extraplanets Eris")
+		public static int eris_id=-21
+
+		@Config.Comment("Default Dimension ID for Extraplanets Europa")
+		public static int europa_id=-1501
+
+		@Config.Comment("Default Dimension ID for Extraplanets Ganymede")
+		public static int ganymede_id=-1506
+
+		@Config.Comment("Default Dimension ID for Extraplanets Iapetus")
+		public static int iapetus_id=-1511
+
+		@Config.Comment("Default Dimension ID for Extraplanets Io")
+		public static int io_id=-1500
+
+		@Config.Comment("Default Dimension ID for Extraplanets Jupiter")
+		public static int jupiter_id=-15
+
+		@Config.Comment("Default Dimension ID for Extraplanets Kepler")
+		public static int kepler_id=-22
+
+		@Config.Comment("Default Dimension ID for Extraplanets Mercury")
+		public static int mercury_id=-13
+
+		@Config.Comment("Default Dimension ID for Extraplanets Neptune")
+		public static int neptune_id=-18
+
+		@Config.Comment("Default Dimension ID for Extraplanets Oberon")
+		public static int oberon_id=-1509
+
+		@Config.Comment("Default Dimension ID for Extraplanets Phobos")
+		public static int phobos_id=-1502
+
+		@Config.Comment("Default Dimension ID for Extraplanets Pluto")
+		public static int pluto_id=-19
+
+		@Config.Comment("Default Dimension ID for Extraplanets Rhea")
+		public static int rhea_id=-1507
+
+		@Config.Comment("Default Dimension ID for Extraplanets Saturn")
+		public static int saturn_id=-16
+
+		@Config.Comment("Default Dimension ID for Extraplanets Titan")
+		public static int titan_id=-1508
+
+		@Config.Comment("Default Dimension ID for Extraplanets Titania")
+		public static int titania_id=-1510
+
+		@Config.Comment("Default Dimension ID for Extraplanets Triton")
+		public static int triton_id=-1504
+
+		@Config.Comment("Default Dimension ID for Extraplanets Uranus")
+		public static int uranus_id=-17
+
 
         @Config.Comment("Default Dimension ID for Glacidus")
         public static int glacidus_id = 84;
