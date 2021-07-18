@@ -8,7 +8,7 @@ import net.minecraft.world.gen.feature.WorldGenerator;
 
 import javax.annotation.Nonnull;
 import java.util.Random;
-import java.util.function.Predicate;
+import com.google.common.base.Predicate;
 
 public class DimWorldGenMinable extends WorldGenerator {
 
@@ -20,7 +20,6 @@ public class DimWorldGenMinable extends WorldGenerator {
         this.oreBlock = block;
         this.stone = stone;
         this.blockCount = blockCount;
-
     }
 
     public boolean generate(@Nonnull World worldIn, @Nonnull Random rand, @Nonnull BlockPos position) {
@@ -62,7 +61,7 @@ public class DimWorldGenMinable extends WorldGenerator {
                                     BlockPos blockpos = new BlockPos(l1, i2, j2);
 
                                     IBlockState state = worldIn.getBlockState(blockpos);
-                                    if (this.stone.test(state)) {
+                                    if (state.getBlock().isReplaceableOreGen(state, worldIn, blockpos, this.stone)) {
                                         worldIn.setBlockState(blockpos, this.oreBlock, 2);
                                     }
                                 }

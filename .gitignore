@@ -50,4 +50,5 @@ options.txt
 /resources_old
 /design
 /.vscode/*
-/libs/*
+/libs/
+/resources/

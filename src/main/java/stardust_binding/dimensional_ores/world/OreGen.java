@@ -15,7 +15,7 @@ import stardust_binding.dimensional_ores.config.OreData;
 
 import javax.annotation.Nonnull;
 import java.util.Random;
-import java.util.function.Predicate;
+import com.google.common.base.Predicate;
 
 public class OreGen implements IWorldGenerator {
 
@@ -34,7 +34,7 @@ public class OreGen implements IWorldGenerator {
                 if(!stone.getBlacklist().contains(ore.getName())) {
                     OreData oreData = OreConfig.getOreData(stone, ore);
                     if(world.provider.getDimension() ==  stone.getDimensionId() && oreData.isEnabled()) {
-                        this.generateOre(OreBlock.get(ore, stone).getDefaultState(), stone.getPredicate(), world, random, chunkX, chunkZ, oreData.getMinY(), oreData.getMaxY(), oreData.getSize(), oreData.getNumberToGenerate());
+                        this.generateOre(OreBlock.get(ore, stone).getDefaultState(), (state) -> stone.getBlockState().equals(state), world, random, chunkX, chunkZ, oreData.getMinY(), oreData.getMaxY(), oreData.getSize(), oreData.getNumberToGenerate());
                     }
                 }
             }

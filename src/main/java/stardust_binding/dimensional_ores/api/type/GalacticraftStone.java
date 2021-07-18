@@ -14,7 +14,7 @@ public class GalacticraftStone extends BasicStone {
     }
 
     @Override
-    protected IBlockState getBlockState() {
+    public IBlockState getBlockState() {
         return this.getStateWithProperties(super.getBlockState(), GalacticraftCompat.INSTANCE);
     }
 }

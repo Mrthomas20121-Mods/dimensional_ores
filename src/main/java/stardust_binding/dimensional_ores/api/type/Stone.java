@@ -11,7 +11,7 @@ import stardust_binding.dimensional_ores.compat.IModCompat;
 
 import javax.annotation.Nonnull;
 import java.util.ArrayList;
-import java.util.function.Predicate;
+import com.google.common.base.Predicate;
 
 public abstract class Stone extends IForgeRegistryEntry.Impl<Stone> implements IStringSerializable {
 
@@ -51,7 +51,7 @@ public abstract class Stone extends IForgeRegistryEntry.Impl<Stone> implements I
         return block_name;
     }
 
-    protected IBlockState getBlockState() {
+    public IBlockState getBlockState() {
         return ForgeRegistries.BLOCKS.getValue(new ResourceLocation(this.getModId(), this.getBlockName())).getDefaultState();
     }
 

@@ -162,7 +162,7 @@ public class Registry {
         r.register(new BasicStone("pitstone", "thebetweenlands", Configuration.Conf.betweenland_id));
 
         // auorian stone
-        r.register(new BasicStone("aurorianstone", "theaurorian", Configuration.Conf.betweenland_id));
+        r.register(new BasicStone("aurorianstone", "theaurorian", Configuration.Conf.aurorian_id));
 
         // glacidus stone
         r.register(new BasicStone("frozen_antinatic_stone", "glacidus", Configuration.Conf.glacidus_id));

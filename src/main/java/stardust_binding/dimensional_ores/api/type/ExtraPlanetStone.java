@@ -17,7 +17,7 @@ public class ExtraPlanetStone extends GalacticraftStone {
     }
 
     @Override
-    protected IBlockState getBlockState() {
+    public IBlockState getBlockState() {
         return this.getStateWithProperties(super.getBlockState(), ExtraPlanetCompat.INSTANCE);
     }
 }

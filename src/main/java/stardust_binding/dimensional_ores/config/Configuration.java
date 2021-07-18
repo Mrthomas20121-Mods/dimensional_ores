@@ -48,6 +48,9 @@ public class Configuration {
         @Config.Comment("Default Dimension ID for The Abyss")
         public static int abyss_id = 76;
 
+        @Config.Comment("Default Dimension ID for The Abyss")
+        public static int aurorian_id = 424;
+
         @Config.Comment("Default Dimension ID for The Erebus")
         public static int erebus_id = 66;
 
