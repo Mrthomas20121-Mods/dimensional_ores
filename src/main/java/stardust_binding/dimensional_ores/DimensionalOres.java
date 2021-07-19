@@ -31,7 +31,7 @@ public class DimensionalOres
     public static DimensionalOres instance;
     public static final String MODID = "dimensional_ores";
     public static final String NAME = "Dimensional Ore";
-    public static final String VERSION = "0.0.2";
+    public static final String VERSION = "0.0.3";
 
     private static Logger logger;
 
