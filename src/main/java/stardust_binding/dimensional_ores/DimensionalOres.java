@@ -54,7 +54,7 @@ public class DimensionalOres
 
     @Mod.EventHandler
     public void init(FMLInitializationEvent event){
-        GameRegistry.registerWorldGenerator(new OreGen(), 500);
+        if(Configuration.Conf.enableWorldgen) GameRegistry.registerWorldGenerator(new OreGen(), 500);
 
         for(Ore ore: Registries.getOreRegistry().getValuesCollection()) {
             for(Stone stone: Registries.getStoneRegistry().getValuesCollection()) {

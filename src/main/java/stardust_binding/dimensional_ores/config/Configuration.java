@@ -24,6 +24,9 @@ public class Configuration {
         @Config.Comment("Should the mod add Furnace Recipes for the ores?")
         public static boolean generateFurnaceRecipes = true;
 
+		@Config.Comment("Should the mod generate Ores?")
+		public static boolean enableWorldgen = true;
+
         @Config.Comment("Default Dimension ID for Aether")
         public static int aether_id = 4;
 
@@ -146,7 +149,6 @@ public class Configuration {
 
 		@Config.Comment("Default Dimension ID for Extraplanets Uranus")
 		public static int uranus_id=-17;
-
 
         @Config.Comment("Default Dimension ID for Glacidus")
         public static int glacidus_id = 84;

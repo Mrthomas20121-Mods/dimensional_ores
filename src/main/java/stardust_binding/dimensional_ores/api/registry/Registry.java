@@ -79,6 +79,7 @@ public class Registry {
         r.register(new Ore("morganite"));
         r.register(new Ore("onyx"));
         r.register(new Ore("opal"));
+        r.register(new Ore("iridium"));
     }
 
     @SubscribeEvent(priority = EventPriority.HIGHEST)
