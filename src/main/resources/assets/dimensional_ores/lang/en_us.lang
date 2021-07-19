@@ -67,6 +67,8 @@ dimensional_ores.ore.fluorite=Fluorite Ore
 dimensional_ores.ore.garnet=Garnet Ore
 # golden_beryl
 dimensional_ores.ore.golden_beryl=Golden Beryl Ore
+# green_sapphire
+dimensional_ores.ore.green_sapphire=Green Sapphire Ore
 # heliodor
 dimensional_ores.ore.heliodor=Heliodor Ore
 # indicolite
@@ -127,7 +129,6 @@ dimensional_ores.ore.violet_sapphire=Violet Sapphire Ore
 dimensional_ores.ore.zircon=Zircon Ore
 # iridium
 dimensional_ores.ore.iridium=Iridium Ore
-
 # holystone
 dimensional_ores.stone.holystone=Holystone
 # limestone

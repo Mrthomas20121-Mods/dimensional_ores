@@ -77,7 +77,7 @@ public class DimensionalOres
                                 output = gemItems.get(0);
                                 output.setCount(1);
                             }
-                            GameRegistry.addSmelting(new ItemStack(oreBlock, 1), output, 1);
+                            if(!output.isEmpty()) GameRegistry.addSmelting(new ItemStack(oreBlock, 1), output, 1);
                         }
                     }
                 }
