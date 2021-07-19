@@ -14,19 +14,19 @@ public class BasicStone extends Stone {
 
     @Override
     public ArrayList<String> getBlacklist() {
-        if(this.getName().contains("asteroids") || getModId().equals("moreplanets")) {
+        if(this.getName().contains("asteroids") || this.getModId().equals("moreplanets")) {
             this.ores.add("aluminum");
         }
-        else if(getModId().contains("extraplanets") || getModId().contains("galacticraft")) {
-            if(this.getName().equals("venus_stone")) {
+        else if(this.getModId().contains("extraplanets") || this.getModId().contains("galacticraft")) {
+            if(this.getName().equals("venus")) {
                 this.ores.add("aluminum");
                 this.ores.add("lead");
             }
             else {
-                if(this.getName().equals("kepler22b_stone")) {
+                if(this.getName().equals("kepler22b")) {
                     this.ores.add("platinum");
                 }
-                else if(this.getName().equals("ceres_stone")) {
+                else if(this.getName().equals("ceres")) {
                     this.ores.add("uranium");
                 }
                 this.ores.add("copper");
@@ -43,10 +43,10 @@ public class BasicStone extends Stone {
                 this.ores.add("nickel");
                 this.ores.add("copper");
             }
-            else if(this.getName().equals("oasis")) {
+            else if(this.getName().equals("oasisstone")) {
                 this.ores.add("copper");
             }
-            else if(this.getName().equals("purgot")) {
+            else if(this.getName().equals("purgstone")) {
                 this.ores.add("copper");
                 this.ores.add("lead");
                 this.ores.add("cobalt");
@@ -56,7 +56,7 @@ public class BasicStone extends Stone {
                 this.ores.add("copper");
                 this.ores.add("cobalt");
             }
-            else if(this.getName().equals("xantheon")) {
+            else if(this.getName().equals("xantheonstone")) {
                 this.ores.add("copper");
                 this.ores.add("nickel");
             }

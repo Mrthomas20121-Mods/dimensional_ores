@@ -28,7 +28,7 @@ public abstract class Stone extends IForgeRegistryEntry.Impl<Stone> implements I
     }
 
     public Stone(String stone_name, String modid, int dimension_id) {
-        this(stone_name, modid, dimension_id, modid.equals("extraplanets") ? stone_name.split("_")[0]:stone_name );
+        this(stone_name, modid, dimension_id, stone_name);
     }
 
     public String getModId() {
