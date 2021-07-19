@@ -7,7 +7,7 @@
       "all": "dimensional_ores:blocks/io_iridium_ore"
     }
   },
-  "variant": {
+  "variants": {
     "normal": [
       {}
     ]

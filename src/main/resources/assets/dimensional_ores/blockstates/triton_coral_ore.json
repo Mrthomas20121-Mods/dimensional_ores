@@ -7,7 +7,7 @@
       "all": "dimensional_ores:blocks/triton_coral_ore"
     }
   },
-  "variant": {
+  "variants": {
     "normal": [
       {}
     ]

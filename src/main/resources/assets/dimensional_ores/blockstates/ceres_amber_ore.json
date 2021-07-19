@@ -7,7 +7,7 @@
       "all": "dimensional_ores:blocks/ceres_amber_ore"
     }
   },
-  "variant": {
+  "variants": {
     "normal": [
       {}
     ]

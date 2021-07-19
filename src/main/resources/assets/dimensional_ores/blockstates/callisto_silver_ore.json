@@ -7,7 +7,7 @@
       "all": "dimensional_ores:blocks/callisto_silver_ore"
     }
   },
-  "variant": {
+  "variants": {
     "normal": [
       {}
     ]

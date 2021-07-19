@@ -7,7 +7,7 @@
       "all": "dimensional_ores:blocks/lunar_stone_cats_eye_ore"
     }
   },
-  "variant": {
+  "variants": {
     "normal": [
       {}
     ]

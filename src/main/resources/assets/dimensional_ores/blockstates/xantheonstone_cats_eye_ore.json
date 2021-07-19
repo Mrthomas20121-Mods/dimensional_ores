@@ -7,7 +7,7 @@
       "all": "dimensional_ores:blocks/xantheonstone_cats_eye_ore"
     }
   },
-  "variant": {
+  "variants": {
     "normal": [
       {}
     ]

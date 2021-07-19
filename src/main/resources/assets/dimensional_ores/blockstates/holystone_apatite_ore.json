@@ -7,7 +7,7 @@
       "all": "dimensional_ores:blocks/holystone_apatite_ore"
     }
   },
-  "variant": {
+  "variants": {
     "normal": [
       {}
     ]

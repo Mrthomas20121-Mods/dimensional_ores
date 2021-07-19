@@ -7,7 +7,7 @@
       "all": "dimensional_ores:blocks/xantheonstone_carnelian_ore"
     }
   },
-  "variant": {
+  "variants": {
     "normal": [
       {}
     ]

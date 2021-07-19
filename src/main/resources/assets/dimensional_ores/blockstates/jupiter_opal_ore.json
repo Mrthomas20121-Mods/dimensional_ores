@@ -7,7 +7,7 @@
       "all": "dimensional_ores:blocks/jupiter_opal_ore"
     }
   },
-  "variant": {
+  "variants": {
     "normal": [
       {}
     ]

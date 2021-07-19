@@ -7,7 +7,7 @@
       "all": "dimensional_ores:blocks/ceres_opal_ore"
     }
   },
-  "variant": {
+  "variants": {
     "normal": [
       {}
     ]

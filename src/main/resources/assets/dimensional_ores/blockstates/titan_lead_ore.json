@@ -7,7 +7,7 @@
       "all": "dimensional_ores:blocks/titan_lead_ore"
     }
   },
-  "variant": {
+  "variants": {
     "normal": [
       {}
     ]

@@ -7,7 +7,7 @@
       "all": "dimensional_ores:blocks/callisto_moonstone_ore"
     }
   },
-  "variant": {
+  "variants": {
     "normal": [
       {}
     ]

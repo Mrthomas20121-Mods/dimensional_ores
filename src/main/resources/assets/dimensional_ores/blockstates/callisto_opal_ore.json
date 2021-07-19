@@ -7,7 +7,7 @@
       "all": "dimensional_ores:blocks/callisto_opal_ore"
     }
   },
-  "variant": {
+  "variants": {
     "normal": [
       {}
     ]

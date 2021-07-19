@@ -7,7 +7,7 @@
       "all": "dimensional_ores:blocks/nibiru_rock_spinel_ore"
     }
   },
-  "variant": {
+  "variants": {
     "normal": [
       {}
     ]

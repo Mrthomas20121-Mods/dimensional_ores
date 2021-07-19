@@ -7,7 +7,7 @@
       "all": "dimensional_ores:blocks/nibiru_rock_apatite_ore"
     }
   },
-  "variant": {
+  "variants": {
     "normal": [
       {}
     ]

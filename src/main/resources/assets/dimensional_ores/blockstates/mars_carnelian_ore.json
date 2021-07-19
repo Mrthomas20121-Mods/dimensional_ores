@@ -7,7 +7,7 @@
       "all": "dimensional_ores:blocks/mars_carnelian_ore"
     }
   },
-  "variant": {
+  "variants": {
     "normal": [
       {}
     ]

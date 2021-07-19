@@ -7,7 +7,7 @@
       "all": "dimensional_ores:blocks/limestone_amethyst_ore"
     }
   },
-  "variant": {
+  "variants": {
     "normal": [
       {}
     ]

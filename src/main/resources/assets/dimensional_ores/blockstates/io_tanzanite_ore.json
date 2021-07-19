@@ -7,7 +7,7 @@
       "all": "dimensional_ores:blocks/io_tanzanite_ore"
     }
   },
-  "variant": {
+  "variants": {
     "normal": [
       {}
     ]

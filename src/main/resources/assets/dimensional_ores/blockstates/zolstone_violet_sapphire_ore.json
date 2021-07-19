@@ -7,7 +7,7 @@
       "all": "dimensional_ores:blocks/zolstone_violet_sapphire_ore"
     }
   },
-  "variant": {
+  "variants": {
     "normal": [
       {}
     ]

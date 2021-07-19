@@ -7,7 +7,7 @@
       "all": "dimensional_ores:blocks/phobos_copper_ore"
     }
   },
-  "variant": {
+  "variants": {
     "normal": [
       {}
     ]

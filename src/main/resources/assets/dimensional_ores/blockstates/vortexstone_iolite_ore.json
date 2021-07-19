@@ -7,7 +7,7 @@
       "all": "dimensional_ores:blocks/vortexstone_iolite_ore"
     }
   },
-  "variant": {
+  "variants": {
     "normal": [
       {}
     ]

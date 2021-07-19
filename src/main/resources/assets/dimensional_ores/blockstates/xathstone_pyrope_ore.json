@@ -7,7 +7,7 @@
       "all": "dimensional_ores:blocks/xathstone_pyrope_ore"
     }
   },
-  "variant": {
+  "variants": {
     "normal": [
       {}
     ]

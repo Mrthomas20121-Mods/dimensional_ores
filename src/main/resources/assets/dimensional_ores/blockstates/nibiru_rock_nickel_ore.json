@@ -7,7 +7,7 @@
       "all": "dimensional_ores:blocks/nibiru_rock_nickel_ore"
     }
   },
-  "variant": {
+  "variants": {
     "normal": [
       {}
     ]

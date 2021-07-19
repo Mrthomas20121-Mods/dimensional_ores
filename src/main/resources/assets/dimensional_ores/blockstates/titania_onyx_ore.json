@@ -7,7 +7,7 @@
       "all": "dimensional_ores:blocks/titania_onyx_ore"
     }
   },
-  "variant": {
+  "variants": {
     "normal": [
       {}
     ]

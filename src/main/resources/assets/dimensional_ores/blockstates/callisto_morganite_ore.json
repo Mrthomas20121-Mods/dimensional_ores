@@ -7,7 +7,7 @@
       "all": "dimensional_ores:blocks/callisto_morganite_ore"
     }
   },
-  "variant": {
+  "variants": {
     "normal": [
       {}
     ]

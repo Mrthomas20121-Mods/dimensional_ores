@@ -7,7 +7,7 @@
       "all": "dimensional_ores:blocks/titan_citrine_ore"
     }
   },
-  "variant": {
+  "variants": {
     "normal": [
       {}
     ]

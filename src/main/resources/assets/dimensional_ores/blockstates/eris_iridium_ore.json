@@ -7,7 +7,7 @@
       "all": "dimensional_ores:blocks/eris_iridium_ore"
     }
   },
-  "variant": {
+  "variants": {
     "normal": [
       {}
     ]

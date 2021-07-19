@@ -7,7 +7,7 @@
       "all": "dimensional_ores:blocks/holystone_amber_ore"
     }
   },
-  "variant": {
+  "variants": {
     "normal": [
       {}
     ]

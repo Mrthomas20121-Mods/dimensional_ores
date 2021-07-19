@@ -7,7 +7,7 @@
       "all": "dimensional_ores:blocks/edenrock_ammolite_ore"
     }
   },
-  "variant": {
+  "variants": {
     "normal": [
       {}
     ]

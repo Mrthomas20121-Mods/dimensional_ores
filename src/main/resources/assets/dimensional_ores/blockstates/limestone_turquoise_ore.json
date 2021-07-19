@@ -7,7 +7,7 @@
       "all": "dimensional_ores:blocks/limestone_turquoise_ore"
     }
   },
-  "variant": {
+  "variants": {
     "normal": [
       {}
     ]

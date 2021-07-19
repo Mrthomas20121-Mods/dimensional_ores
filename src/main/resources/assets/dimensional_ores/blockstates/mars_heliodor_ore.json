@@ -7,7 +7,7 @@
       "all": "dimensional_ores:blocks/mars_heliodor_ore"
     }
   },
-  "variant": {
+  "variants": {
     "normal": [
       {}
     ]

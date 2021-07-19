@@ -7,7 +7,7 @@
       "all": "dimensional_ores:blocks/rhea_aquamarine_ore"
     }
   },
-  "variant": {
+  "variants": {
     "normal": [
       {}
     ]

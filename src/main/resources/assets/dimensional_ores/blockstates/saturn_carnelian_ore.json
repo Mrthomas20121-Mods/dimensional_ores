@@ -7,7 +7,7 @@
       "all": "dimensional_ores:blocks/saturn_carnelian_ore"
     }
   },
-  "variant": {
+  "variants": {
     "normal": [
       {}
     ]

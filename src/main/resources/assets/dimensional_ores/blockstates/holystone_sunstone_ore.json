@@ -7,7 +7,7 @@
       "all": "dimensional_ores:blocks/holystone_sunstone_ore"
     }
   },
-  "variant": {
+  "variants": {
     "normal": [
       {}
     ]

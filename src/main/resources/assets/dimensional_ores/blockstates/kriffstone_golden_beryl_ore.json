@@ -7,7 +7,7 @@
       "all": "dimensional_ores:blocks/kriffstone_golden_beryl_ore"
     }
   },
-  "variant": {
+  "variants": {
     "normal": [
       {}
     ]

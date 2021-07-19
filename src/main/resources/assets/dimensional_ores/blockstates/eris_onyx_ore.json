@@ -7,7 +7,7 @@
       "all": "dimensional_ores:blocks/eris_onyx_ore"
     }
   },
-  "variant": {
+  "variants": {
     "normal": [
       {}
     ]

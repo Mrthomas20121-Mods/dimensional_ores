@@ -7,7 +7,7 @@
       "all": "dimensional_ores:blocks/turquoise_stone_opal_ore"
     }
   },
-  "variant": {
+  "variants": {
     "normal": [
       {}
     ]

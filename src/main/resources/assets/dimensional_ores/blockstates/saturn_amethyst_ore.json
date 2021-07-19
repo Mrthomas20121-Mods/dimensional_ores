@@ -7,7 +7,7 @@
       "all": "dimensional_ores:blocks/saturn_amethyst_ore"
     }
   },
-  "variant": {
+  "variants": {
     "normal": [
       {}
     ]

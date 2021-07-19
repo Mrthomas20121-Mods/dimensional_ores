@@ -7,7 +7,7 @@
       "all": "dimensional_ores:blocks/oasisstone_nickel_ore"
     }
   },
-  "variant": {
+  "variants": {
     "normal": [
       {}
     ]

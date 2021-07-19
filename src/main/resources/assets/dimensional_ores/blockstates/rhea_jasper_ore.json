@@ -7,7 +7,7 @@
       "all": "dimensional_ores:blocks/rhea_jasper_ore"
     }
   },
-  "variant": {
+  "variants": {
     "normal": [
       {}
     ]

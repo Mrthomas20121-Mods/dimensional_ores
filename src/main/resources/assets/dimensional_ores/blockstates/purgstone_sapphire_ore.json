@@ -7,7 +7,7 @@
       "all": "dimensional_ores:blocks/purgstone_sapphire_ore"
     }
   },
-  "variant": {
+  "variants": {
     "normal": [
       {}
     ]

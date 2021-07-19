@@ -7,7 +7,7 @@
       "all": "dimensional_ores:blocks/neptune_jasper_ore"
     }
   },
-  "variant": {
+  "variants": {
     "normal": [
       {}
     ]

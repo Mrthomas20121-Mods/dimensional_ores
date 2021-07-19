@@ -7,7 +7,7 @@
       "all": "dimensional_ores:blocks/phobos_sunstone_ore"
     }
   },
-  "variant": {
+  "variants": {
     "normal": [
       {}
     ]

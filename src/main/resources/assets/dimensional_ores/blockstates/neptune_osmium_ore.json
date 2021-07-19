@@ -7,7 +7,7 @@
       "all": "dimensional_ores:blocks/neptune_osmium_ore"
     }
   },
-  "variant": {
+  "variants": {
     "normal": [
       {}
     ]

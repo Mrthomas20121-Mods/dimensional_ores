@@ -7,7 +7,7 @@
       "all": "dimensional_ores:blocks/ganymede_cobalt_ore"
     }
   },
-  "variant": {
+  "variants": {
     "normal": [
       {}
     ]

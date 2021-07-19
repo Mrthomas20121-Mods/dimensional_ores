@@ -7,7 +7,7 @@
       "all": "dimensional_ores:blocks/rhea_turquoise_ore"
     }
   },
-  "variant": {
+  "variants": {
     "normal": [
       {}
     ]

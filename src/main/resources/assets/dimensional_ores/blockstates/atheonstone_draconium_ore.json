@@ -7,7 +7,7 @@
       "all": "dimensional_ores:blocks/atheonstone_draconium_ore"
     }
   },
-  "variant": {
+  "variants": {
     "normal": [
       {}
     ]

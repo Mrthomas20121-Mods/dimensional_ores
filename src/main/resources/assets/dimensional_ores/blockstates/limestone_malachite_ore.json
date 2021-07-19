@@ -7,7 +7,7 @@
       "all": "dimensional_ores:blocks/limestone_malachite_ore"
     }
   },
-  "variant": {
+  "variants": {
     "normal": [
       {}
     ]

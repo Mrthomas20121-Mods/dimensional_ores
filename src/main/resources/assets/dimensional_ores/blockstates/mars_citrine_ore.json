@@ -7,7 +7,7 @@
       "all": "dimensional_ores:blocks/mars_citrine_ore"
     }
   },
-  "variant": {
+  "variants": {
     "normal": [
       {}
     ]

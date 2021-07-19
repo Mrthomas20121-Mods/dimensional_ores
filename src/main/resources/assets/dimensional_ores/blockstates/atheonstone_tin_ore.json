@@ -7,7 +7,7 @@
       "all": "dimensional_ores:blocks/atheonstone_tin_ore"
     }
   },
-  "variant": {
+  "variants": {
     "normal": [
       {}
     ]

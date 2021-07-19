@@ -7,7 +7,7 @@
       "all": "dimensional_ores:blocks/ceres_tektite_ore"
     }
   },
-  "variant": {
+  "variants": {
     "normal": [
       {}
     ]

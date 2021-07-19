@@ -7,7 +7,7 @@
       "all": "dimensional_ores:blocks/mercury_cats_eye_ore"
     }
   },
-  "variant": {
+  "variants": {
     "normal": [
       {}
     ]

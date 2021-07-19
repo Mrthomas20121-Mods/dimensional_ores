@@ -7,7 +7,7 @@
       "all": "dimensional_ores:blocks/venus_citrine_ore"
     }
   },
-  "variant": {
+  "variants": {
     "normal": [
       {}
     ]

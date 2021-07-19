@@ -7,7 +7,7 @@
       "all": "dimensional_ores:blocks/turquoise_stone_indicolite_ore"
     }
   },
-  "variant": {
+  "variants": {
     "normal": [
       {}
     ]

@@ -7,7 +7,7 @@
       "all": "dimensional_ores:blocks/pitstone_kyanite_ore"
     }
   },
-  "variant": {
+  "variants": {
     "normal": [
       {}
     ]

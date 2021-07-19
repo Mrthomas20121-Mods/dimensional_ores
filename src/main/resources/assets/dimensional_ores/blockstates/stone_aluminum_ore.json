@@ -7,7 +7,7 @@
       "all": "dimensional_ores:blocks/stone_aluminum_ore"
     }
   },
-  "variant": {
+  "variants": {
     "normal": [
       {}
     ]

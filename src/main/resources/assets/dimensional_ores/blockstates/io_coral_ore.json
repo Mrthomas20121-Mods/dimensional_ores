@@ -7,7 +7,7 @@
       "all": "dimensional_ores:blocks/io_coral_ore"
     }
   },
-  "variant": {
+  "variants": {
     "normal": [
       {}
     ]

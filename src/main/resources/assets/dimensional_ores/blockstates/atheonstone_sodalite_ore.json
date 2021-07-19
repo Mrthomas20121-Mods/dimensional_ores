@@ -7,7 +7,7 @@
       "all": "dimensional_ores:blocks/atheonstone_sodalite_ore"
     }
   },
-  "variant": {
+  "variants": {
     "normal": [
       {}
     ]

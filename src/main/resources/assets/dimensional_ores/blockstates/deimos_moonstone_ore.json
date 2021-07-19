@@ -7,7 +7,7 @@
       "all": "dimensional_ores:blocks/deimos_moonstone_ore"
     }
   },
-  "variant": {
+  "variants": {
     "normal": [
       {}
     ]

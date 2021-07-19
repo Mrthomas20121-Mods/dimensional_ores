@@ -7,7 +7,7 @@
       "all": "dimensional_ores:blocks/europa_kyanite_ore"
     }
   },
-  "variant": {
+  "variants": {
     "normal": [
       {}
     ]

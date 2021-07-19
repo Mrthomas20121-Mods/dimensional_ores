@@ -7,7 +7,7 @@
       "all": "dimensional_ores:blocks/ceres_garnet_ore"
     }
   },
-  "variant": {
+  "variants": {
     "normal": [
       {}
     ]

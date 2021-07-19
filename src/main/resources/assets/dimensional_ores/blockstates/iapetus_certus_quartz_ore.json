@@ -7,7 +7,7 @@
       "all": "dimensional_ores:blocks/iapetus_certus_quartz_ore"
     }
   },
-  "variant": {
+  "variants": {
     "normal": [
       {}
     ]

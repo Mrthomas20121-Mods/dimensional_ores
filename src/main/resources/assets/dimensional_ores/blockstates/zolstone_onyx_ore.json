@@ -7,7 +7,7 @@
       "all": "dimensional_ores:blocks/zolstone_onyx_ore"
     }
   },
-  "variant": {
+  "variants": {
     "normal": [
       {}
     ]

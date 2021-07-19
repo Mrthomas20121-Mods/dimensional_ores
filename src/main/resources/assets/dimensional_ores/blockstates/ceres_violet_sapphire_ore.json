@@ -7,7 +7,7 @@
       "all": "dimensional_ores:blocks/ceres_violet_sapphire_ore"
     }
   },
-  "variant": {
+  "variants": {
     "normal": [
       {}
     ]

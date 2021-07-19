@@ -7,7 +7,7 @@
       "all": "dimensional_ores:blocks/trenchstone_zircon_ore"
     }
   },
-  "variant": {
+  "variants": {
     "normal": [
       {}
     ]

@@ -7,7 +7,7 @@
       "all": "dimensional_ores:blocks/ceres_golden_beryl_ore"
     }
   },
-  "variant": {
+  "variants": {
     "normal": [
       {}
     ]

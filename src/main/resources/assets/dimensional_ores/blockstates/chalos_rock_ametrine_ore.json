@@ -7,7 +7,7 @@
       "all": "dimensional_ores:blocks/chalos_rock_ametrine_ore"
     }
   },
-  "variant": {
+  "variants": {
     "normal": [
       {}
     ]

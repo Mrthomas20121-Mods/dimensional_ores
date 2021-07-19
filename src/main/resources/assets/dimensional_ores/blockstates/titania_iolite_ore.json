@@ -7,7 +7,7 @@
       "all": "dimensional_ores:blocks/titania_iolite_ore"
     }
   },
-  "variant": {
+  "variants": {
     "normal": [
       {}
     ]

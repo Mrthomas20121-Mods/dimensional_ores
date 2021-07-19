@@ -7,7 +7,7 @@
       "all": "dimensional_ores:blocks/iapetus_silver_ore"
     }
   },
-  "variant": {
+  "variants": {
     "normal": [
       {}
     ]

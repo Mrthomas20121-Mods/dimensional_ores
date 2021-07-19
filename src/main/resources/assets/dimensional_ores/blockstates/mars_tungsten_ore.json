@@ -7,7 +7,7 @@
       "all": "dimensional_ores:blocks/mars_tungsten_ore"
     }
   },
-  "variant": {
+  "variants": {
     "normal": [
       {}
     ]

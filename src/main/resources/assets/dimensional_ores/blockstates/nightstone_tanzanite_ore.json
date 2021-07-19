@@ -7,7 +7,7 @@
       "all": "dimensional_ores:blocks/nightstone_tanzanite_ore"
     }
   },
-  "variant": {
+  "variants": {
     "normal": [
       {}
     ]

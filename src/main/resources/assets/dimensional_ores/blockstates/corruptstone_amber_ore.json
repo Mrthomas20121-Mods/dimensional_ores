@@ -7,7 +7,7 @@
       "all": "dimensional_ores:blocks/corruptstone_amber_ore"
     }
   },
-  "variant": {
+  "variants": {
     "normal": [
       {}
     ]

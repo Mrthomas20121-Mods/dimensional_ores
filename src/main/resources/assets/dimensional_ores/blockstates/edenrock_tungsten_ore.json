@@ -7,7 +7,7 @@
       "all": "dimensional_ores:blocks/edenrock_tungsten_ore"
     }
   },
-  "variant": {
+  "variants": {
     "normal": [
       {}
     ]

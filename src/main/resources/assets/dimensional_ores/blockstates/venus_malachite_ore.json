@@ -7,7 +7,7 @@
       "all": "dimensional_ores:blocks/venus_malachite_ore"
     }
   },
-  "variant": {
+  "variants": {
     "normal": [
       {}
     ]

@@ -7,7 +7,7 @@
       "all": "dimensional_ores:blocks/corruptstone_amethyst_ore"
     }
   },
-  "variant": {
+  "variants": {
     "normal": [
       {}
     ]

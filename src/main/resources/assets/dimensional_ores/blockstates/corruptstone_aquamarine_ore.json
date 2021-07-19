@@ -7,7 +7,7 @@
       "all": "dimensional_ores:blocks/corruptstone_aquamarine_ore"
     }
   },
-  "variant": {
+  "variants": {
     "normal": [
       {}
     ]

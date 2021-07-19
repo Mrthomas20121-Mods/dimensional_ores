@@ -7,7 +7,7 @@
       "all": "dimensional_ores:blocks/ceres_osmium_ore"
     }
   },
-  "variant": {
+  "variants": {
     "normal": [
       {}
     ]

@@ -7,7 +7,7 @@
       "all": "dimensional_ores:blocks/diona_rock_platinum_ore"
     }
   },
-  "variant": {
+  "variants": {
     "normal": [
       {}
     ]

@@ -7,7 +7,7 @@
       "all": "dimensional_ores:blocks/corruptstone_ammolite_ore"
     }
   },
-  "variant": {
+  "variants": {
     "normal": [
       {}
     ]

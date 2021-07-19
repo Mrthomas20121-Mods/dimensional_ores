@@ -7,7 +7,7 @@
       "all": "dimensional_ores:blocks/zolstone_silver_ore"
     }
   },
-  "variant": {
+  "variants": {
     "normal": [
       {}
     ]

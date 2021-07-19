@@ -7,7 +7,7 @@
       "all": "dimensional_ores:blocks/pluto_ammolite_ore"
     }
   },
-  "variant": {
+  "variants": {
     "normal": [
       {}
     ]

@@ -7,7 +7,7 @@
       "all": "dimensional_ores:blocks/pluto_moldavite_ore"
     }
   },
-  "variant": {
+  "variants": {
     "normal": [
       {}
     ]

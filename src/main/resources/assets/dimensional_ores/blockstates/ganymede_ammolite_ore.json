@@ -7,7 +7,7 @@
       "all": "dimensional_ores:blocks/ganymede_ammolite_ore"
     }
   },
-  "variant": {
+  "variants": {
     "normal": [
       {}
     ]

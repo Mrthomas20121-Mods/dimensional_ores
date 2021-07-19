@@ -7,7 +7,7 @@
       "all": "dimensional_ores:blocks/uranus_citrine_ore"
     }
   },
-  "variant": {
+  "variants": {
     "normal": [
       {}
     ]

@@ -7,7 +7,7 @@
       "all": "dimensional_ores:blocks/iapetus_heliodor_ore"
     }
   },
-  "variant": {
+  "variants": {
     "normal": [
       {}
     ]

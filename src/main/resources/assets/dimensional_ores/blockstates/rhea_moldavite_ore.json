@@ -7,7 +7,7 @@
       "all": "dimensional_ores:blocks/rhea_moldavite_ore"
     }
   },
-  "variant": {
+  "variants": {
     "normal": [
       {}
     ]

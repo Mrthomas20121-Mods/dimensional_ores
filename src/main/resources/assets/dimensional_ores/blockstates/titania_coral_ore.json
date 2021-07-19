@@ -7,7 +7,7 @@
       "all": "dimensional_ores:blocks/titania_coral_ore"
     }
   },
-  "variant": {
+  "variants": {
     "normal": [
       {}
     ]

@@ -7,7 +7,7 @@
       "all": "dimensional_ores:blocks/aurorianstone_spinel_ore"
     }
   },
-  "variant": {
+  "variants": {
     "normal": [
       {}
     ]

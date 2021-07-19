@@ -7,7 +7,7 @@
       "all": "dimensional_ores:blocks/koentus_rock_uranium_ore"
     }
   },
-  "variant": {
+  "variants": {
     "normal": [
       {}
     ]

@@ -7,7 +7,7 @@
       "all": "dimensional_ores:blocks/vortexstone_uranium_ore"
     }
   },
-  "variant": {
+  "variants": {
     "normal": [
       {}
     ]

@@ -7,7 +7,7 @@
       "all": "dimensional_ores:blocks/lunar_stone_tanzanite_ore"
     }
   },
-  "variant": {
+  "variants": {
     "normal": [
       {}
     ]

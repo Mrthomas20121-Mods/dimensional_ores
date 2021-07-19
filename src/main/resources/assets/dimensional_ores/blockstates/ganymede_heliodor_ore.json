@@ -7,7 +7,7 @@
       "all": "dimensional_ores:blocks/ganymede_heliodor_ore"
     }
   },
-  "variant": {
+  "variants": {
     "normal": [
       {}
     ]

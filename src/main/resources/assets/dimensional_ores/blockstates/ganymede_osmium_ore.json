@@ -7,7 +7,7 @@
       "all": "dimensional_ores:blocks/ganymede_osmium_ore"
     }
   },
-  "variant": {
+  "variants": {
     "normal": [
       {}
     ]

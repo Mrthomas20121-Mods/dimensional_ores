@@ -7,7 +7,7 @@
       "all": "dimensional_ores:blocks/oberon_topaz_ore"
     }
   },
-  "variant": {
+  "variants": {
     "normal": [
       {}
     ]

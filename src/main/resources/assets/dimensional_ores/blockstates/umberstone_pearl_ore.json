@@ -7,7 +7,7 @@
       "all": "dimensional_ores:blocks/umberstone_pearl_ore"
     }
   },
-  "variant": {
+  "variants": {
     "normal": [
       {}
     ]

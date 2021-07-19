@@ -7,7 +7,7 @@
       "all": "dimensional_ores:blocks/eris_lead_ore"
     }
   },
-  "variant": {
+  "variants": {
     "normal": [
       {}
     ]

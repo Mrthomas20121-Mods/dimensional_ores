@@ -7,7 +7,7 @@
       "all": "dimensional_ores:blocks/edenrock_sunstone_ore"
     }
   },
-  "variant": {
+  "variants": {
     "normal": [
       {}
     ]

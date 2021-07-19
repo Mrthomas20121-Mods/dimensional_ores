@@ -7,7 +7,7 @@
       "all": "dimensional_ores:blocks/xathstone_ammolite_ore"
     }
   },
-  "variant": {
+  "variants": {
     "normal": [
       {}
     ]

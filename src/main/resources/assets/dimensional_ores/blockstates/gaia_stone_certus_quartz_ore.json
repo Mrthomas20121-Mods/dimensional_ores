@@ -7,7 +7,7 @@
       "all": "dimensional_ores:blocks/gaia_stone_certus_quartz_ore"
     }
   },
-  "variant": {
+  "variants": {
     "normal": [
       {}
     ]

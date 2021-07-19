@@ -7,7 +7,7 @@
       "all": "dimensional_ores:blocks/callisto_ammolite_ore"
     }
   },
-  "variant": {
+  "variants": {
     "normal": [
       {}
     ]

@@ -7,7 +7,7 @@
       "all": "dimensional_ores:blocks/ganymede_citrine_ore"
     }
   },
-  "variant": {
+  "variants": {
     "normal": [
       {}
     ]

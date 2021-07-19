@@ -7,7 +7,7 @@
       "all": "dimensional_ores:blocks/aurorianstone_ardite_ore"
     }
   },
-  "variant": {
+  "variants": {
     "normal": [
       {}
     ]

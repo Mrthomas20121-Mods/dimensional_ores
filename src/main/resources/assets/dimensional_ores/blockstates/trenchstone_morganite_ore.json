@@ -7,7 +7,7 @@
       "all": "dimensional_ores:blocks/trenchstone_morganite_ore"
     }
   },
-  "variant": {
+  "variants": {
     "normal": [
       {}
     ]

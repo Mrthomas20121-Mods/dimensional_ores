@@ -7,7 +7,7 @@
       "all": "dimensional_ores:blocks/altumstone_amethyst_ore"
     }
   },
-  "variant": {
+  "variants": {
     "normal": [
       {}
     ]

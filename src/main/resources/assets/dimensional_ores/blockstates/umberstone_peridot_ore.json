@@ -7,7 +7,7 @@
       "all": "dimensional_ores:blocks/umberstone_peridot_ore"
     }
   },
-  "variant": {
+  "variants": {
     "normal": [
       {}
     ]

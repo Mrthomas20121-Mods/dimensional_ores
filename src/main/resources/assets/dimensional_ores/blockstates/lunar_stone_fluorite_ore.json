@@ -7,7 +7,7 @@
       "all": "dimensional_ores:blocks/lunar_stone_fluorite_ore"
     }
   },
-  "variant": {
+  "variants": {
     "normal": [
       {}
     ]

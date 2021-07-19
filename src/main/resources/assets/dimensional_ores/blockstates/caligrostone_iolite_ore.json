@@ -7,7 +7,7 @@
       "all": "dimensional_ores:blocks/caligrostone_iolite_ore"
     }
   },
-  "variant": {
+  "variants": {
     "normal": [
       {}
     ]

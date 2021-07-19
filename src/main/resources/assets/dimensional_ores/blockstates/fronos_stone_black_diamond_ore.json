@@ -7,7 +7,7 @@
       "all": "dimensional_ores:blocks/fronos_stone_black_diamond_ore"
     }
   },
-  "variant": {
+  "variants": {
     "normal": [
       {}
     ]

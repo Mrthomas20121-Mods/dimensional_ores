@@ -7,7 +7,7 @@
       "all": "dimensional_ores:blocks/mars_moldavite_ore"
     }
   },
-  "variant": {
+  "variants": {
     "normal": [
       {}
     ]

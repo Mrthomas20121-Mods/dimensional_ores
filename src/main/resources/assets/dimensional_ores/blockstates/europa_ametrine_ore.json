@@ -7,7 +7,7 @@
       "all": "dimensional_ores:blocks/europa_ametrine_ore"
     }
   },
-  "variant": {
+  "variants": {
     "normal": [
       {}
     ]

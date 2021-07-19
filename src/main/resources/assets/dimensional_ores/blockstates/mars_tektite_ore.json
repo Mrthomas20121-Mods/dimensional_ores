@@ -7,7 +7,7 @@
       "all": "dimensional_ores:blocks/mars_tektite_ore"
     }
   },
-  "variant": {
+  "variants": {
     "normal": [
       {}
     ]

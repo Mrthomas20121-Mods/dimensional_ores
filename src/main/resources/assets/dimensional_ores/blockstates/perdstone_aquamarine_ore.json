@@ -7,7 +7,7 @@
       "all": "dimensional_ores:blocks/perdstone_aquamarine_ore"
     }
   },
-  "variant": {
+  "variants": {
     "normal": [
       {}
     ]

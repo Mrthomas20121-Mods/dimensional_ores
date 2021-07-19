@@ -7,7 +7,7 @@
       "all": "dimensional_ores:blocks/mars_platinum_ore"
     }
   },
-  "variant": {
+  "variants": {
     "normal": [
       {}
     ]

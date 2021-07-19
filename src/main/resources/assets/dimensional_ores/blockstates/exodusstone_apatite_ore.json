@@ -7,7 +7,7 @@
       "all": "dimensional_ores:blocks/exodusstone_apatite_ore"
     }
   },
-  "variant": {
+  "variants": {
     "normal": [
       {}
     ]

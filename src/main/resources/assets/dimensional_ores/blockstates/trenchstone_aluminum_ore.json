@@ -7,7 +7,7 @@
       "all": "dimensional_ores:blocks/trenchstone_aluminum_ore"
     }
   },
-  "variant": {
+  "variants": {
     "normal": [
       {}
     ]

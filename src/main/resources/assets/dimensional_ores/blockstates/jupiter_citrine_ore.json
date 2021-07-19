@@ -7,7 +7,7 @@
       "all": "dimensional_ores:blocks/jupiter_citrine_ore"
     }
   },
-  "variant": {
+  "variants": {
     "normal": [
       {}
     ]

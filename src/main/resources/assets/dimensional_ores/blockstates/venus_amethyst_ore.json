@@ -7,7 +7,7 @@
       "all": "dimensional_ores:blocks/venus_amethyst_ore"
     }
   },
-  "variant": {
+  "variants": {
     "normal": [
       {}
     ]

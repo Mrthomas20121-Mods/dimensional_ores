@@ -7,7 +7,7 @@
       "all": "dimensional_ores:blocks/zolstone_lead_ore"
     }
   },
-  "variant": {
+  "variants": {
     "normal": [
       {}
     ]

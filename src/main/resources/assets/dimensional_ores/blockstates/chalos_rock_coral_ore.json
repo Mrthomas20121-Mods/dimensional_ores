@@ -7,7 +7,7 @@
       "all": "dimensional_ores:blocks/chalos_rock_coral_ore"
     }
   },
-  "variant": {
+  "variants": {
     "normal": [
       {}
     ]

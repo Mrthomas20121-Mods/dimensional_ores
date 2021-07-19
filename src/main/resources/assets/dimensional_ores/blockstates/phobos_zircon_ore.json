@@ -7,7 +7,7 @@
       "all": "dimensional_ores:blocks/phobos_zircon_ore"
     }
   },
-  "variant": {
+  "variants": {
     "normal": [
       {}
     ]

@@ -7,7 +7,7 @@
       "all": "dimensional_ores:blocks/iapetus_blue_topaz_ore"
     }
   },
-  "variant": {
+  "variants": {
     "normal": [
       {}
     ]

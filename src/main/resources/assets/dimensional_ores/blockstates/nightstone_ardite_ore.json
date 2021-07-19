@@ -7,7 +7,7 @@
       "all": "dimensional_ores:blocks/nightstone_ardite_ore"
     }
   },
-  "variant": {
+  "variants": {
     "normal": [
       {}
     ]

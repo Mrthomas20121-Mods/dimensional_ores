@@ -7,7 +7,7 @@
       "all": "dimensional_ores:blocks/nibiru_rock_peridot_ore"
     }
   },
-  "variant": {
+  "variants": {
     "normal": [
       {}
     ]

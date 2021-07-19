@@ -7,7 +7,7 @@
       "all": "dimensional_ores:blocks/ceres_spinel_ore"
     }
   },
-  "variant": {
+  "variants": {
     "normal": [
       {}
     ]

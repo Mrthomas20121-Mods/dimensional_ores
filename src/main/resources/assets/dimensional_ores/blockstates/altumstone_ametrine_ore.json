@@ -7,7 +7,7 @@
       "all": "dimensional_ores:blocks/altumstone_ametrine_ore"
     }
   },
-  "variant": {
+  "variants": {
     "normal": [
       {}
     ]

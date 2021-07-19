@@ -7,7 +7,7 @@
       "all": "dimensional_ores:blocks/titania_agate_ore"
     }
   },
-  "variant": {
+  "variants": {
     "normal": [
       {}
     ]

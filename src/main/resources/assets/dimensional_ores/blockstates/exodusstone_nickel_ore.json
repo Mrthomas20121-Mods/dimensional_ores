@@ -7,7 +7,7 @@
       "all": "dimensional_ores:blocks/exodusstone_nickel_ore"
     }
   },
-  "variant": {
+  "variants": {
     "normal": [
       {}
     ]

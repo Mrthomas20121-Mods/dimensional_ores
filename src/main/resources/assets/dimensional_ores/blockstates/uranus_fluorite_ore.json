@@ -7,7 +7,7 @@
       "all": "dimensional_ores:blocks/uranus_fluorite_ore"
     }
   },
-  "variant": {
+  "variants": {
     "normal": [
       {}
     ]

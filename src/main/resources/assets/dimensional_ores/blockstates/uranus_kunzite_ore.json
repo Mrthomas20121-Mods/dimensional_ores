@@ -7,7 +7,7 @@
       "all": "dimensional_ores:blocks/uranus_kunzite_ore"
     }
   },
-  "variant": {
+  "variants": {
     "normal": [
       {}
     ]

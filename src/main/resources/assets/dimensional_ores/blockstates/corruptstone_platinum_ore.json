@@ -7,7 +7,7 @@
       "all": "dimensional_ores:blocks/corruptstone_platinum_ore"
     }
   },
-  "variant": {
+  "variants": {
     "normal": [
       {}
     ]

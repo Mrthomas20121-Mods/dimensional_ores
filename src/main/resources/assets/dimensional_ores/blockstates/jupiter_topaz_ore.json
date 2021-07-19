@@ -7,7 +7,7 @@
       "all": "dimensional_ores:blocks/jupiter_topaz_ore"
     }
   },
-  "variant": {
+  "variants": {
     "normal": [
       {}
     ]

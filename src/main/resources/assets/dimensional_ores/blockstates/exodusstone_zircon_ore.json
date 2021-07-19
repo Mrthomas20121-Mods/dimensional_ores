@@ -7,7 +7,7 @@
       "all": "dimensional_ores:blocks/exodusstone_zircon_ore"
     }
   },
-  "variant": {
+  "variants": {
     "normal": [
       {}
     ]

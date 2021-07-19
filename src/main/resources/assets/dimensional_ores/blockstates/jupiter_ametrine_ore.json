@@ -7,7 +7,7 @@
       "all": "dimensional_ores:blocks/jupiter_ametrine_ore"
     }
   },
-  "variant": {
+  "variants": {
     "normal": [
       {}
     ]

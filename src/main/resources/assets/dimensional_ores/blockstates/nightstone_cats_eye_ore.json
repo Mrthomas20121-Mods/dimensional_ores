@@ -7,7 +7,7 @@
       "all": "dimensional_ores:blocks/nightstone_cats_eye_ore"
     }
   },
-  "variant": {
+  "variants": {
     "normal": [
       {}
     ]

@@ -7,7 +7,7 @@
       "all": "dimensional_ores:blocks/altumstone_opal_ore"
     }
   },
-  "variant": {
+  "variants": {
     "normal": [
       {}
     ]

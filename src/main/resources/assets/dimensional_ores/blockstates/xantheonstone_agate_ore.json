@@ -7,7 +7,7 @@
       "all": "dimensional_ores:blocks/xantheonstone_agate_ore"
     }
   },
-  "variant": {
+  "variants": {
     "normal": [
       {}
     ]

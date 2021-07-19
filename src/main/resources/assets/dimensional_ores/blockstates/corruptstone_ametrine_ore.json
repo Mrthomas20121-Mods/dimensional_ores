@@ -7,7 +7,7 @@
       "all": "dimensional_ores:blocks/corruptstone_ametrine_ore"
     }
   },
-  "variant": {
+  "variants": {
     "normal": [
       {}
     ]

@@ -7,7 +7,7 @@
       "all": "dimensional_ores:blocks/phobos_sapphire_ore"
     }
   },
-  "variant": {
+  "variants": {
     "normal": [
       {}
     ]

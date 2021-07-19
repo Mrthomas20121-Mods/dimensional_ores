@@ -7,7 +7,7 @@
       "all": "dimensional_ores:blocks/ganymede_tanzanite_ore"
     }
   },
-  "variant": {
+  "variants": {
     "normal": [
       {}
     ]

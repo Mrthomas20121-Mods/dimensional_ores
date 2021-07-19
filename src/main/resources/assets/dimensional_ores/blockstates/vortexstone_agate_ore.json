@@ -7,7 +7,7 @@
       "all": "dimensional_ores:blocks/vortexstone_agate_ore"
     }
   },
-  "variant": {
+  "variants": {
     "normal": [
       {}
     ]

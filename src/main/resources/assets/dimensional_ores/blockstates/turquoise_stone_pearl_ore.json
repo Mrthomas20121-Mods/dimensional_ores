@@ -7,7 +7,7 @@
       "all": "dimensional_ores:blocks/turquoise_stone_pearl_ore"
     }
   },
-  "variant": {
+  "variants": {
     "normal": [
       {}
     ]

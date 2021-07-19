@@ -7,7 +7,7 @@
       "all": "dimensional_ores:blocks/umberstone_ardite_ore"
     }
   },
-  "variant": {
+  "variants": {
     "normal": [
       {}
     ]

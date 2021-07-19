@@ -7,7 +7,7 @@
       "all": "dimensional_ores:blocks/xathstone_iolite_ore"
     }
   },
-  "variant": {
+  "variants": {
     "normal": [
       {}
     ]

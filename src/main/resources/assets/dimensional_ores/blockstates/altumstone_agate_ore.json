@@ -7,7 +7,7 @@
       "all": "dimensional_ores:blocks/altumstone_agate_ore"
     }
   },
-  "variant": {
+  "variants": {
     "normal": [
       {}
     ]

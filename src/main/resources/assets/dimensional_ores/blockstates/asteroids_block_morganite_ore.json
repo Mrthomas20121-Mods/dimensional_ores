@@ -7,7 +7,7 @@
       "all": "dimensional_ores:blocks/asteroids_block_morganite_ore"
     }
   },
-  "variant": {
+  "variants": {
     "normal": [
       {}
     ]

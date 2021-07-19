@@ -7,7 +7,7 @@
       "all": "dimensional_ores:blocks/iapetus_zircon_ore"
     }
   },
-  "variant": {
+  "variants": {
     "normal": [
       {}
     ]

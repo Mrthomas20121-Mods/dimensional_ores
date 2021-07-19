@@ -7,7 +7,7 @@
       "all": "dimensional_ores:blocks/pluto_beryl_ore"
     }
   },
-  "variant": {
+  "variants": {
     "normal": [
       {}
     ]

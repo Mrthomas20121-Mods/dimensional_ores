@@ -7,7 +7,7 @@
       "all": "dimensional_ores:blocks/saturn_tanzanite_ore"
     }
   },
-  "variant": {
+  "variants": {
     "normal": [
       {}
     ]

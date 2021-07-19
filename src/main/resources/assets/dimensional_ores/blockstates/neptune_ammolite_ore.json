@@ -7,7 +7,7 @@
       "all": "dimensional_ores:blocks/neptune_ammolite_ore"
     }
   },
-  "variant": {
+  "variants": {
     "normal": [
       {}
     ]

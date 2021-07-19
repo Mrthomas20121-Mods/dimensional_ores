@@ -7,7 +7,7 @@
       "all": "dimensional_ores:blocks/diona_rock_sodalite_ore"
     }
   },
-  "variant": {
+  "variants": {
     "normal": [
       {}
     ]

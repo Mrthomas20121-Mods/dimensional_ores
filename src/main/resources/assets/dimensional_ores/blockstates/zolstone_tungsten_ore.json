@@ -7,7 +7,7 @@
       "all": "dimensional_ores:blocks/zolstone_tungsten_ore"
     }
   },
-  "variant": {
+  "variants": {
     "normal": [
       {}
     ]

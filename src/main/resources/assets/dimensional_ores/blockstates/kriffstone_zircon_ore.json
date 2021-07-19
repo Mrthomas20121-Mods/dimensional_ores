@@ -7,7 +7,7 @@
       "all": "dimensional_ores:blocks/kriffstone_zircon_ore"
     }
   },
-  "variant": {
+  "variants": {
     "normal": [
       {}
     ]

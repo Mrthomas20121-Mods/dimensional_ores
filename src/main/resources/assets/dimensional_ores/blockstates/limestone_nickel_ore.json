@@ -7,7 +7,7 @@
       "all": "dimensional_ores:blocks/limestone_nickel_ore"
     }
   },
-  "variant": {
+  "variants": {
     "normal": [
       {}
     ]

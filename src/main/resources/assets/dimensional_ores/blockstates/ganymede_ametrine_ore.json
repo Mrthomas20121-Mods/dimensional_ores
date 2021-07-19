@@ -7,7 +7,7 @@
       "all": "dimensional_ores:blocks/ganymede_ametrine_ore"
     }
   },
-  "variant": {
+  "variants": {
     "normal": [
       {}
     ]

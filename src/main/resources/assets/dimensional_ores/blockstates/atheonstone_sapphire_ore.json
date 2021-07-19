@@ -7,7 +7,7 @@
       "all": "dimensional_ores:blocks/atheonstone_sapphire_ore"
     }
   },
-  "variant": {
+  "variants": {
     "normal": [
       {}
     ]

@@ -7,7 +7,7 @@
       "all": "dimensional_ores:blocks/saturn_ammolite_ore"
     }
   },
-  "variant": {
+  "variants": {
     "normal": [
       {}
     ]

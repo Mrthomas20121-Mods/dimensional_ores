@@ -7,7 +7,7 @@
       "all": "dimensional_ores:blocks/umberstone_opal_ore"
     }
   },
-  "variant": {
+  "variants": {
     "normal": [
       {}
     ]

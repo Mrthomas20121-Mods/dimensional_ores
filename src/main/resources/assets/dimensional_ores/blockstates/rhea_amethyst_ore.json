@@ -7,7 +7,7 @@
       "all": "dimensional_ores:blocks/rhea_amethyst_ore"
     }
   },
-  "variant": {
+  "variants": {
     "normal": [
       {}
     ]

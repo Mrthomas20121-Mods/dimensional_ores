@@ -7,7 +7,7 @@
       "all": "dimensional_ores:blocks/rhea_apatite_ore"
     }
   },
-  "variant": {
+  "variants": {
     "normal": [
       {}
     ]

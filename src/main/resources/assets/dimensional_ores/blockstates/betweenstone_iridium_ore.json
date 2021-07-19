@@ -7,7 +7,7 @@
       "all": "dimensional_ores:blocks/betweenstone_iridium_ore"
     }
   },
-  "variant": {
+  "variants": {
     "normal": [
       {}
     ]

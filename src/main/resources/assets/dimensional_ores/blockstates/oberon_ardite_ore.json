@@ -7,7 +7,7 @@
       "all": "dimensional_ores:blocks/oberon_ardite_ore"
     }
   },
-  "variant": {
+  "variants": {
     "normal": [
       {}
     ]

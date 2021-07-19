@@ -7,7 +7,7 @@
       "all": "dimensional_ores:blocks/ceres_agate_ore"
     }
   },
-  "variant": {
+  "variants": {
     "normal": [
       {}
     ]

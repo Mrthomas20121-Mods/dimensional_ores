@@ -7,7 +7,7 @@
       "all": "dimensional_ores:blocks/oasisstone_draconium_ore"
     }
   },
-  "variant": {
+  "variants": {
     "normal": [
       {}
     ]

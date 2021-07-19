@@ -7,7 +7,7 @@
       "all": "dimensional_ores:blocks/io_violet_sapphire_ore"
     }
   },
-  "variant": {
+  "variants": {
     "normal": [
       {}
     ]

@@ -7,7 +7,7 @@
       "all": "dimensional_ores:blocks/xathstone_indicolite_ore"
     }
   },
-  "variant": {
+  "variants": {
     "normal": [
       {}
     ]

@@ -7,7 +7,7 @@
       "all": "dimensional_ores:blocks/kriffstone_indicolite_ore"
     }
   },
-  "variant": {
+  "variants": {
     "normal": [
       {}
     ]

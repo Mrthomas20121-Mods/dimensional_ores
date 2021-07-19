@@ -7,7 +7,7 @@
       "all": "dimensional_ores:blocks/venus_rose_quartz_ore"
     }
   },
-  "variant": {
+  "variants": {
     "normal": [
       {}
     ]

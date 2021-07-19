@@ -7,7 +7,7 @@
       "all": "dimensional_ores:blocks/jupiter_violet_sapphire_ore"
     }
   },
-  "variant": {
+  "variants": {
     "normal": [
       {}
     ]

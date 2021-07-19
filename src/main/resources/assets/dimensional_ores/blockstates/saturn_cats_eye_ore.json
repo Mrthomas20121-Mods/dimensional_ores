@@ -7,7 +7,7 @@
       "all": "dimensional_ores:blocks/saturn_cats_eye_ore"
     }
   },
-  "variant": {
+  "variants": {
     "normal": [
       {}
     ]

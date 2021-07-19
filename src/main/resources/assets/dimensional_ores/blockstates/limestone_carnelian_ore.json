@@ -7,7 +7,7 @@
       "all": "dimensional_ores:blocks/limestone_carnelian_ore"
     }
   },
-  "variant": {
+  "variants": {
     "normal": [
       {}
     ]

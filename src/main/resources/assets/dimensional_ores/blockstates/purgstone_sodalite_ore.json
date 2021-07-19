@@ -7,7 +7,7 @@
       "all": "dimensional_ores:blocks/purgstone_sodalite_ore"
     }
   },
-  "variant": {
+  "variants": {
     "normal": [
       {}
     ]

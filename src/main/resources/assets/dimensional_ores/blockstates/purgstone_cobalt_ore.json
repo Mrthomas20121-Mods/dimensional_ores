@@ -7,7 +7,7 @@
       "all": "dimensional_ores:blocks/purgstone_cobalt_ore"
     }
   },
-  "variant": {
+  "variants": {
     "normal": [
       {}
     ]

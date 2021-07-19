@@ -7,7 +7,7 @@
       "all": "dimensional_ores:blocks/koentus_rock_blue_topaz_ore"
     }
   },
-  "variant": {
+  "variants": {
     "normal": [
       {}
     ]

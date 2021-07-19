@@ -7,7 +7,7 @@
       "all": "dimensional_ores:blocks/europa_aluminum_ore"
     }
   },
-  "variant": {
+  "variants": {
     "normal": [
       {}
     ]

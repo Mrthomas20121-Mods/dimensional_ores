@@ -7,7 +7,7 @@
       "all": "dimensional_ores:blocks/altumstone_iolite_ore"
     }
   },
-  "variant": {
+  "variants": {
     "normal": [
       {}
     ]

@@ -7,7 +7,7 @@
       "all": "dimensional_ores:blocks/kepler22b_ametrine_ore"
     }
   },
-  "variant": {
+  "variants": {
     "normal": [
       {}
     ]

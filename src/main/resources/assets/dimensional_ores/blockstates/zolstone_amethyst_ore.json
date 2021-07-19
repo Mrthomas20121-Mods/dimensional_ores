@@ -7,7 +7,7 @@
       "all": "dimensional_ores:blocks/zolstone_amethyst_ore"
     }
   },
-  "variant": {
+  "variants": {
     "normal": [
       {}
     ]

@@ -7,7 +7,7 @@
       "all": "dimensional_ores:blocks/diona_rock_heliodor_ore"
     }
   },
-  "variant": {
+  "variants": {
     "normal": [
       {}
     ]

@@ -7,7 +7,7 @@
       "all": "dimensional_ores:blocks/nightstone_spinel_ore"
     }
   },
-  "variant": {
+  "variants": {
     "normal": [
       {}
     ]

@@ -7,7 +7,7 @@
       "all": "dimensional_ores:blocks/io_heliodor_ore"
     }
   },
-  "variant": {
+  "variants": {
     "normal": [
       {}
     ]

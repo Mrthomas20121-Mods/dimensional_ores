@@ -7,7 +7,7 @@
       "all": "dimensional_ores:blocks/xantheonstone_ruby_ore"
     }
   },
-  "variant": {
+  "variants": {
     "normal": [
       {}
     ]

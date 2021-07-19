@@ -7,7 +7,7 @@
       "all": "dimensional_ores:blocks/altumstone_citrine_ore"
     }
   },
-  "variant": {
+  "variants": {
     "normal": [
       {}
     ]

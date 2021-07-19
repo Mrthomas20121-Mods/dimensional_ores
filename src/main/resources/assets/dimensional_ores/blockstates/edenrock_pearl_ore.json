@@ -7,7 +7,7 @@
       "all": "dimensional_ores:blocks/edenrock_pearl_ore"
     }
   },
-  "variant": {
+  "variants": {
     "normal": [
       {}
     ]

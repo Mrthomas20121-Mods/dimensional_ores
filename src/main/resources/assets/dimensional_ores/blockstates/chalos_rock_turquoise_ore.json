@@ -7,7 +7,7 @@
       "all": "dimensional_ores:blocks/chalos_rock_turquoise_ore"
     }
   },
-  "variant": {
+  "variants": {
     "normal": [
       {}
     ]

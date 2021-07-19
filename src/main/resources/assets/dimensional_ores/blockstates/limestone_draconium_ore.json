@@ -7,7 +7,7 @@
       "all": "dimensional_ores:blocks/limestone_draconium_ore"
     }
   },
-  "variant": {
+  "variants": {
     "normal": [
       {}
     ]

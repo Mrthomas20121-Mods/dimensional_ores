@@ -7,7 +7,7 @@
       "all": "dimensional_ores:blocks/corruptstone_iolite_ore"
     }
   },
-  "variant": {
+  "variants": {
     "normal": [
       {}
     ]

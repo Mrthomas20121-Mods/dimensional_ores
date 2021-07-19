@@ -7,7 +7,7 @@
       "all": "dimensional_ores:blocks/neptune_carnelian_ore"
     }
   },
-  "variant": {
+  "variants": {
     "normal": [
       {}
     ]

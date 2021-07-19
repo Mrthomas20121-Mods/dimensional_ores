@@ -7,7 +7,7 @@
       "all": "dimensional_ores:blocks/aurorianstone_ametrine_ore"
     }
   },
-  "variant": {
+  "variants": {
     "normal": [
       {}
     ]

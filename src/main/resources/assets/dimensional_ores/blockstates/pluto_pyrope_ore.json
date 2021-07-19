@@ -7,7 +7,7 @@
       "all": "dimensional_ores:blocks/pluto_pyrope_ore"
     }
   },
-  "variant": {
+  "variants": {
     "normal": [
       {}
     ]

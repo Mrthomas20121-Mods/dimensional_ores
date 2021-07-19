@@ -7,7 +7,7 @@
       "all": "dimensional_ores:blocks/xantheonstone_nickel_ore"
     }
   },
-  "variant": {
+  "variants": {
     "normal": [
       {}
     ]

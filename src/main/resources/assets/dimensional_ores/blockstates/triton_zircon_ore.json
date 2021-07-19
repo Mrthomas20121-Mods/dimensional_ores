@@ -7,7 +7,7 @@
       "all": "dimensional_ores:blocks/triton_zircon_ore"
     }
   },
-  "variant": {
+  "variants": {
     "normal": [
       {}
     ]

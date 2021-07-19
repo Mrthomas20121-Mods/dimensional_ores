@@ -7,7 +7,7 @@
       "all": "dimensional_ores:blocks/perdstone_jasper_ore"
     }
   },
-  "variant": {
+  "variants": {
     "normal": [
       {}
     ]

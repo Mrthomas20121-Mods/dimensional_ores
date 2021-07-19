@@ -7,7 +7,7 @@
       "all": "dimensional_ores:blocks/frozen_antinatric_stone_agate_ore"
     }
   },
-  "variant": {
+  "variants": {
     "normal": [
       {}
     ]

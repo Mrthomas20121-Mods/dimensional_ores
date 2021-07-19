@@ -7,7 +7,7 @@
       "all": "dimensional_ores:blocks/iapetus_cobalt_ore"
     }
   },
-  "variant": {
+  "variants": {
     "normal": [
       {}
     ]

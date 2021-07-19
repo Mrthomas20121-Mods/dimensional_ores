@@ -7,7 +7,7 @@
       "all": "dimensional_ores:blocks/ceres_peridot_ore"
     }
   },
-  "variant": {
+  "variants": {
     "normal": [
       {}
     ]

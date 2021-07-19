@@ -7,7 +7,7 @@
       "all": "dimensional_ores:blocks/titania_cats_eye_ore"
     }
   },
-  "variant": {
+  "variants": {
     "normal": [
       {}
     ]

@@ -7,7 +7,7 @@
       "all": "dimensional_ores:blocks/umberstone_spinel_ore"
     }
   },
-  "variant": {
+  "variants": {
     "normal": [
       {}
     ]

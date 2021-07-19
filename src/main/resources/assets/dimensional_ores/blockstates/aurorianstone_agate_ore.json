@@ -7,7 +7,7 @@
       "all": "dimensional_ores:blocks/aurorianstone_agate_ore"
     }
   },
-  "variant": {
+  "variants": {
     "normal": [
       {}
     ]

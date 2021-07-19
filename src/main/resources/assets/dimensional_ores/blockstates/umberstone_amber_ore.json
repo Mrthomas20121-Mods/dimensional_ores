@@ -7,7 +7,7 @@
       "all": "dimensional_ores:blocks/umberstone_amber_ore"
     }
   },
-  "variant": {
+  "variants": {
     "normal": [
       {}
     ]

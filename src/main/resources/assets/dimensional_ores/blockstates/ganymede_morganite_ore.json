@@ -7,7 +7,7 @@
       "all": "dimensional_ores:blocks/ganymede_morganite_ore"
     }
   },
-  "variant": {
+  "variants": {
     "normal": [
       {}
     ]

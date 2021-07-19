@@ -7,7 +7,7 @@
       "all": "dimensional_ores:blocks/betweenstone_amethyst_ore"
     }
   },
-  "variant": {
+  "variants": {
     "normal": [
       {}
     ]

@@ -7,7 +7,7 @@
       "all": "dimensional_ores:blocks/zolstone_ammolite_ore"
     }
   },
-  "variant": {
+  "variants": {
     "normal": [
       {}
     ]

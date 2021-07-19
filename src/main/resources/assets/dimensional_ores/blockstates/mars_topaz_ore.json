@@ -7,7 +7,7 @@
       "all": "dimensional_ores:blocks/mars_topaz_ore"
     }
   },
-  "variant": {
+  "variants": {
     "normal": [
       {}
     ]

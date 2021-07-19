@@ -7,7 +7,7 @@
       "all": "dimensional_ores:blocks/rhea_tin_ore"
     }
   },
-  "variant": {
+  "variants": {
     "normal": [
       {}
     ]

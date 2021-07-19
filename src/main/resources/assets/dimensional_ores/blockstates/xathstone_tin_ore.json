@@ -7,7 +7,7 @@
       "all": "dimensional_ores:blocks/xathstone_tin_ore"
     }
   },
-  "variant": {
+  "variants": {
     "normal": [
       {}
     ]

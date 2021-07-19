@@ -7,7 +7,7 @@
       "all": "dimensional_ores:blocks/oasisstone_garnet_ore"
     }
   },
-  "variant": {
+  "variants": {
     "normal": [
       {}
     ]

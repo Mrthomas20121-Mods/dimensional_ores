@@ -7,7 +7,7 @@
       "all": "dimensional_ores:blocks/io_lepidolite_ore"
     }
   },
-  "variant": {
+  "variants": {
     "normal": [
       {}
     ]

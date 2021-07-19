@@ -7,7 +7,7 @@
       "all": "dimensional_ores:blocks/saturn_ardite_ore"
     }
   },
-  "variant": {
+  "variants": {
     "normal": [
       {}
     ]

@@ -7,7 +7,7 @@
       "all": "dimensional_ores:blocks/ganymede_ardite_ore"
     }
   },
-  "variant": {
+  "variants": {
     "normal": [
       {}
     ]

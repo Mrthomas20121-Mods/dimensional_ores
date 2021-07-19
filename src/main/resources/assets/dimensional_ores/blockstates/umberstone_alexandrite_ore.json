@@ -7,7 +7,7 @@
       "all": "dimensional_ores:blocks/umberstone_alexandrite_ore"
     }
   },
-  "variant": {
+  "variants": {
     "normal": [
       {}
     ]

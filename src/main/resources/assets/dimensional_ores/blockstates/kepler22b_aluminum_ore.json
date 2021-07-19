@@ -7,7 +7,7 @@
       "all": "dimensional_ores:blocks/kepler22b_aluminum_ore"
     }
   },
-  "variant": {
+  "variants": {
     "normal": [
       {}
     ]

@@ -7,7 +7,7 @@
       "all": "dimensional_ores:blocks/basic_block_moon_ruby_ore"
     }
   },
-  "variant": {
+  "variants": {
     "normal": [
       {}
     ]

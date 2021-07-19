@@ -7,7 +7,7 @@
       "all": "dimensional_ores:blocks/limestone_jasper_ore"
     }
   },
-  "variant": {
+  "variants": {
     "normal": [
       {}
     ]

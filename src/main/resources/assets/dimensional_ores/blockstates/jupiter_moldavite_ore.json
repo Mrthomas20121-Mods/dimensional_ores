@@ -7,7 +7,7 @@
       "all": "dimensional_ores:blocks/jupiter_moldavite_ore"
     }
   },
-  "variant": {
+  "variants": {
     "normal": [
       {}
     ]

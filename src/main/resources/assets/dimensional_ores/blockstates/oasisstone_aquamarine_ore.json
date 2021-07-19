@@ -7,7 +7,7 @@
       "all": "dimensional_ores:blocks/oasisstone_aquamarine_ore"
     }
   },
-  "variant": {
+  "variants": {
     "normal": [
       {}
     ]

@@ -7,7 +7,7 @@
       "all": "dimensional_ores:blocks/purgstone_amber_ore"
     }
   },
-  "variant": {
+  "variants": {
     "normal": [
       {}
     ]

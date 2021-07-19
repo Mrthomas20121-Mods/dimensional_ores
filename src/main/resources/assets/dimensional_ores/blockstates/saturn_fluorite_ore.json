@@ -7,7 +7,7 @@
       "all": "dimensional_ores:blocks/saturn_fluorite_ore"
     }
   },
-  "variant": {
+  "variants": {
     "normal": [
       {}
     ]

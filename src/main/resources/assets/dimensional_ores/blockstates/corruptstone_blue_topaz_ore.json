@@ -7,7 +7,7 @@
       "all": "dimensional_ores:blocks/corruptstone_blue_topaz_ore"
     }
   },
-  "variant": {
+  "variants": {
     "normal": [
       {}
     ]

@@ -7,7 +7,7 @@
       "all": "dimensional_ores:blocks/aurorianstone_amethyst_ore"
     }
   },
-  "variant": {
+  "variants": {
     "normal": [
       {}
     ]
