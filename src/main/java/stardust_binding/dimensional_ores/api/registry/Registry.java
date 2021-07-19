@@ -92,79 +92,63 @@ public class Registry {
     public static void registerStones(Events.PreEvent<Stone> event) {
         IForgeRegistry<Stone> r = event.getRegistry();
 
-        // aether legacy stone
         r.register(new BasicStone("holystone", "aether_legacy", Configuration.Conf.aether_id));
-
-        // atum stone
         r.register(new BasicStone("limestone", "atum", Configuration.Conf.atum_id));
-
-        // misty world stone
-        r.register(new BasicStone("foggy_stone", "mist", Configuration.Conf.mist_id, "stone"));
-
-        // erebus stone
-        r.register(new BasicStone("umberstone", "erebus", Configuration.Conf.erebus_id));
-
-        // midnight stones
-        r.register(new BasicStone("trenchstone", "midnight", Configuration.Conf.midnight_id));
-        r.register(new BasicStone("nightstone", "midnight", Configuration.Conf.midnight_id));
-
-        // the abyss stones
-        r.register(new BasicStone("abyss_stone", "theabyss", 4));
-
-        // gaia dimension stone
-        r.register(new BasicStone("gaia_stone", "gaiadimension", Configuration.Conf.gaia_id));
-
-        // blue skies stones
         r.register(new BasicStone("turquoise_stone", "blue_skies", Configuration.Conf.everbright_id));
         r.register(new BasicStone("lunar_stone", "blue_skies", Configuration.Conf.everdawn_id));
-
-        // galacticraft stones
-        r.register(new GalacticraftStone("moon_rock", "galacticraftcore", Configuration.Conf.galacticraft_moon_id, "basic_block_moon"));
-        r.register(new GalacticraftStone("mars_stone", "galacticraftplanets", Configuration.Conf.galacticraft_mars_id, "mars"));
-        r.register(new GalacticraftStone("venus_stone", "galacticraftplanets", Configuration.Conf.galacticraft_venus_id, "venus"));
-        r.register(new GalacticraftStone("asteroids_rock", "galacticraftplanets", Configuration.Conf.galacticraft_asteroids_id, "asteroids_block"));
-
-        // extra planets stones
-        r.register(new ExtraPlanetStone("mercury_stone", "extraplanets", -13));
-        r.register(new ExtraPlanetStone("triton_stone", "extraplanets", -1504));
-        r.register(new ExtraPlanetStone("titania_stone", "extraplanets", -1510));
-        r.register(new ExtraPlanetStone("jupiter_stone", "extraplanets", -15));
-        r.register(new ExtraPlanetStone("saturn_stone", "extraplanets", -16));
-        r.register(new ExtraPlanetStone("neptune_stone", "extraplanets", -18));
-        r.register(new ExtraPlanetStone("ceres_stone", "extraplanets", -20));
-        r.register(new ExtraPlanetStone("kepler22b_stone", "extraplanets", -21));
-        r.register(new ExtraPlanetStone("eris_stone", "extraplanets", -22));
-        r.register(new ExtraPlanetStone("uranus_stone", "extraplanets", -21));
-        r.register(new ExtraPlanetStone("europa_stone", "extraplanets", -1501));
-        r.register(new ExtraPlanetStone("io_stone", "extraplanets", -1500));
-        r.register(new ExtraPlanetStone("deimos_stone", "extraplanets", -1503));
-        r.register(new ExtraPlanetStone("phobos_stone", "extraplanets", -1502));
-        r.register(new ExtraPlanetStone("callisto_stone", "extraplanets", -1505));
-        r.register(new ExtraPlanetStone("ganymede_stone", "extraplanets", -1506));
-        r.register(new ExtraPlanetStone("titan_stone", "extraplanets", -1508));
-        r.register(new ExtraPlanetStone("oberon_stone", "extraplanets", -1509));
-        r.register(new ExtraPlanetStone("iapetus_stone", "extraplanets", -1511));
-        r.register(new ExtraPlanetStone("rhea_stone", "extraplanets", -1507));
-
-        // more planets stones
-        r.register(new BasicStone("diona_stone", "moreplanets", -2542));
-        r.register(new BasicStone("fronos_stone", "moreplanets", -2545));
-        r.register(new BasicStone("chalos_rock", "moreplanets", -2543));
-        r.register(new BasicStone("nibiru_rock", "moreplanets", -2544));
-
-        // zollern galaxy stones
-        r.register(new BasicStone("altum", "zollerngalaxy", -7878, "altumstone"));
-        r.register(new BasicStone("atheon", "zollerngalaxy", -7998, "atheonstone"));
-        r.register(new BasicStone("caligro", "zollerngalaxy", -7877, "caligrostone"));
-
-        // betweenlands stones
+        r.register(new BasicStone("umberstone", "erebus", Configuration.Conf.erebus_id));
+        r.register(new ExtraPlanetStone("io", "extraplanets", Configuration.Conf.io_id));
+        r.register(new ExtraPlanetStone("mercury", "extraplanets", Configuration.Conf.mercury_id));
+        r.register(new ExtraPlanetStone("ceres", "extraplanets", Configuration.Conf.ceres_id));
+        r.register(new ExtraPlanetStone("jupiter", "extraplanets", Configuration.Conf.jupiter_id));
+        r.register(new ExtraPlanetStone("pluto", "extraplanets", Configuration.Conf.pluto_id));
+        r.register(new ExtraPlanetStone("eris", "extraplanets", Configuration.Conf.eris_id));
+        r.register(new ExtraPlanetStone("kepler22b", "extraplanets", Configuration.Conf.kepler_id));
+        r.register(new ExtraPlanetStone("deimos", "extraplanets", Configuration.Conf.deimos_id));
+        r.register(new ExtraPlanetStone("ganymede", "extraplanets", Configuration.Conf.ganymede_id));
+        r.register(new ExtraPlanetStone("titan", "extraplanets", Configuration.Conf.titan_id));
+        r.register(new ExtraPlanetStone("titania", "extraplanets", Configuration.Conf.titania_id));
+        r.register(new ExtraPlanetStone("saturn", "extraplanets", Configuration.Conf.saturn_id));
+        r.register(new ExtraPlanetStone("phobos", "extraplanets", Configuration.Conf.phobos_id));
+        r.register(new ExtraPlanetStone("triton", "extraplanets", Configuration.Conf.triton_id));
+        r.register(new ExtraPlanetStone("rhea", "extraplanets", Configuration.Conf.rhea_id));
+        r.register(new ExtraPlanetStone("iapetus", "extraplanets", Configuration.Conf.iapetus_id));
+        r.register(new ExtraPlanetStone("uranus", "extraplanets", Configuration.Conf.uranus_id));
+        r.register(new ExtraPlanetStone("neptune", "extraplanets", Configuration.Conf.neptune_id));
+        r.register(new ExtraPlanetStone("europa", "extraplanets", Configuration.Conf.europa_id));
+        r.register(new ExtraPlanetStone("callisto", "extraplanets", Configuration.Conf.callisto_id));
+        r.register(new ExtraPlanetStone("oberon", "extraplanets", Configuration.Conf.oberon_id));
+        r.register(new BasicStone("gaia_stone", "gaia_dimension", Configuration.Conf.gaia_id));
+        r.register(new GalacticraftStone("asteroids_block", "galacticraft_core", Configuration.Conf.galacticraft_asteroids_id));
+        r.register(new GalacticraftStone("basic_block_moon", "galacticraft_core", Configuration.Conf.galacticraft_moon_id));
+        r.register(new GalacticraftStone("mars", "galacticraft_core", Configuration.Conf.galacticraft_mars_id));
+        r.register(new GalacticraftStone("venus", "galacticraft_core", Configuration.Conf.galacticraft_venus_id));
+        r.register(new BasicStone("frozen_antinatric_stone", "glacidus", Configuration.Conf.glacidus_id));
+        r.register(new BasicStone("nightstone", "midnight", Configuration.Conf.midnight_id));
+        r.register(new BasicStone("trenchstone", "midnight", Configuration.Conf.midnight_id));
+        r.register(new BasicStone("stone", "mist", Configuration.Conf.mist_id));
+        r.register(new BasicStone("stone_porous", "mist", Configuration.Conf.mist_id));
+        r.register(new BasicStone("fronos_stone", "moreplanets", Configuration.Conf.fronos_id));
+        r.register(new BasicStone("diona_rock", "moreplanets", Configuration.Conf.diona_id));
+        r.register(new BasicStone("chalos_rock", "moreplanets", Configuration.Conf.chalos_id));
+        r.register(new BasicStone("koentus_rock", "moreplanets", Configuration.Conf.koentus_id));
+        r.register(new BasicStone("nibiru_rock", "moreplanets", Configuration.Conf.nibiru_id));
+        r.register(new BasicStone("aurorianstone", "theaurorian", Configuration.Conf.aurorian_id));
         r.register(new BasicStone("betweenstone", "thebetweenlands", Configuration.Conf.betweenland_id));
         r.register(new BasicStone("pitstone", "thebetweenlands", Configuration.Conf.betweenland_id));
-
-        // auorian stone
-        r.register(new BasicStone("aurorianstone", "theaurorian", Configuration.Conf.aurorian_id));
-
-        // glacidus stone
-        r.register(new BasicStone("frozen_antinatic_stone", "glacidus", Configuration.Conf.glacidus_id));
+        r.register(new BasicStone("edenrock", "zollerngalaxy", 0));
+        r.register(new BasicStone("kriffstone", "zollerngalaxy", 0));
+        r.register(new BasicStone("oasisstone", "zollerngalaxy", 0));
+        r.register(new BasicStone("atheonstone", "zollerngalaxy", -7998));
+        r.register(new BasicStone("perdstone", "zollerngalaxy", 0));
+        r.register(new BasicStone("altumstone", "zollerngalaxy", -7878));
+        r.register(new BasicStone("caligrostone", "zollerngalaxy", -7877));
+        r.register(new BasicStone("corruptstone", "zollerngalaxy", 0));
+        r.register(new BasicStone("exodusstone", "zollerngalaxy", 0));
+        r.register(new BasicStone("purgstone", "zollerngalaxy", 0));
+        r.register(new BasicStone("zolstone", "zollerngalaxy", 0));
+        r.register(new BasicStone("xathstone", "zollerngalaxy", 0));
+        r.register(new BasicStone("xantheonstone", "zollerngalaxy", 0));
+        r.register(new BasicStone("vortexstone", "zollerngalaxy", 0));
     }
 }
