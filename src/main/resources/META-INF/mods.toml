@@ -1,0 +1,29 @@
+modLoader="javafml"
+loaderVersion="[36,)"
+license="MIT License"
+issueTrackerURL="https://github.com/Mrthomas20121-mods/dimensional_ores/issues"
+
+[[mods]]
+modId="dimensional_ores"
+version="2.0.0"
+displayName="Dimensional Ores"
+displayURL="https://www.curseforge.com/minecraft/mc-mods/dimensional_ores"
+#logoFile="tinkers_reforged_logo.png"
+authors="Mrthomas20121"
+description='''
+Add Common Modded Ores to Dimensions
+'''
+
+[[dependencies.dimensional_ores]]
+    modId="forge"
+    mandatory=true
+    versionRange="[36.2.19,)"
+    ordering="NONE"
+    side="BOTH"
+
+[[dependencies.dimensional_ores]]
+    modId="minecraft"
+    mandatory=true
+    versionRange="[1.16.5,)"
+    ordering="NONE"
+    side="BOTH"
