@@ -1,6 +1,11 @@
 package mrthomas20121.dimensional_ores.api;
 
+import net.minecraftforge.fml.ModList;
+
+import java.util.Arrays;
+import java.util.List;
 import java.util.Locale;
+import java.util.stream.Collectors;
 
 public enum Ore {
     COAL,
@@ -29,5 +34,16 @@ public enum Ore {
 
     public String getModID() {
         return modID;
+    }
+
+    public boolean isLoaded() {
+        if(modID.equals("minecraft")) {
+            return true;
+        }
+        return ModList.get().isLoaded(this.modID);
+    }
+
+    public static List<Ore> getActiveValues() {
+        return Arrays.stream(Ore.values()).filter(Ore::isLoaded).collect(Collectors.toList());
     }
 }

@@ -1,16 +1,17 @@
 package mrthomas20121.dimensional_ores.api;
 
-import com.google.gson.JsonArray;
-import com.google.gson.JsonObject;
 import mrthomas20121.dimensional_ores.DimensionalOres;
-import mrthomas20121.dimensional_ores.Registry;
+import mrthomas20121.dimensional_ores.DimRegistry;
 import net.minecraft.block.Block;
+import net.minecraft.block.BlockState;
 import net.minecraft.item.Item;
+import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.fml.ModList;
 import net.minecraftforge.fml.RegistryObject;
-import net.minecraftforge.registries.IForgeRegistryEntry;
+import net.minecraftforge.registries.ForgeRegistries;
 
 import java.util.*;
+import java.util.stream.Collectors;
 
 public class Stone {
 
@@ -20,66 +21,58 @@ public class Stone {
     }
 
     private final String name;
-    private final String mod_id;
-    private final Ore[] ores;
-    private final List<RegistryObject<Block>> blocks = new ArrayList<>();
+    private final String modID;
+    private final List<Ore> ores;
+    private final Map<Ore,RegistryObject<Block>> blockMap = new HashMap<>();
     private final List<RegistryObject<Item>> items = new ArrayList<>();
 
-    public Stone(String name, String mod_id, Ore ...ores) {
+    public Stone(String name, String modID, Ore ...ores) {
         this.name = name;
-        this.mod_id = mod_id;
-        this.ores = ores;
+        this.modID = modID;
+        this.ores = ListUtil.newArrayList(ores);
         this.registerOres();
         list.add(this);
     }
 
-    public Stone(String name, String mod_id) {
+    public Stone(String name, String modID) {
         this.name = name;
-        this.mod_id = mod_id;
-        this.ores = Ore.values();
+        this.modID = modID;
+        this.ores = Ore.getActiveValues();
         this.registerOres();
         list.add(this);
     }
 
     private void registerOres() {
-        if(!ModList.get().isLoaded(this.mod_id)) {
-            DimensionalOres.LOGGER.info(String.format("Skipping %s because %s is not loaded", this.getName(), this.mod_id));
+        if(!ModList.get().isLoaded(this.modID)) {
+            DimensionalOres.LOGGER.info(String.format("Skipping %s because %s is not loaded", this.getName(), this.modID));
             return;
         }
         for(Ore ore: this.ores) {
-            if(!ore.getModID().equals("minecraft")) {
-                // skip the ore if the mod is not loaded
-                if(!ModList.get().isLoaded(ore.getModID())) continue;
-            }
             String name = String.format("%s_%s", this.getName(), ore.getName());
-            RegistryObject<Block> block = Registry.BLOCKS.register(name, Registry::registerBlock);
-            RegistryObject<Item> item = Registry.ITEMS.register(name, () -> Registry.registerItem(block.get()));
-            this.blocks.add(block);
+            RegistryObject<Block> block = DimRegistry.BLOCKS.register(name, DimRegistry::registerBlock);
+            RegistryObject<Item> item = DimRegistry.ITEMS.register(name, () -> DimRegistry.registerItem(block.get()));
+            this.blockMap.put(ore, block);
             this.items.add(item);
         }
     }
 
-    public String getModID() {
-        return mod_id;
+    public Block getStone() {
+        return ForgeRegistries.BLOCKS.getValue(new ResourceLocation(this.modID, this.name));
     }
 
-    public Ore[] getOres() {
-        return ores;
-    }
-
-    public JsonObject toJson() {
-        JsonObject object = new JsonObject();
-        JsonArray oreArray = new JsonArray();
-
-        for(Ore ore: this.ores) {
-            oreArray.add(ore.getName());
-        }
-        object.add("ores", oreArray);
-
-        return object;
+    public RegistryObject<Block> getBlock(Ore ore) {
+        return this.blockMap.get(ore);
     }
 
     public String getName() {
-        return this.name.toLowerCase(Locale.ROOT);
+        return this.name.toLowerCase();
+    }
+
+    public String getModID() {
+        return this.modID;
+    }
+
+    public List<Ore> getOres() {
+        return this.ores;
     }
 }

@@ -17,7 +17,15 @@ public class OreData extends JsonReloadListener {
 
     private static final Gson gson = new GsonBuilder().setPrettyPrinting().registerTypeAdapter(OreConfig.class, OreConfig.Adapter.INSTANCE).create();
 
+    public static final OreData INSTANCE = new OreData();
+
     public static Map<Ore, OreConfig> table = new HashMap<>();
+
+    static {
+        for(Ore ore: Ore.getActiveValues()) {
+            table.put(ore, new OreConfig(true, 4, 10, 30, 60));
+        }
+    }
 
     public OreData() {
         super(gson, "dim_ore_data");
@@ -31,39 +39,25 @@ public class OreData extends JsonReloadListener {
             OreConfig oreConfig = gson.fromJson(ele, OreConfig.class);
             table.put(ore, oreConfig);
         }
-
-        if(table.isEmpty()) {
-            for(Ore ore: Ore.values()) {
-                table.put(ore, defaultValue);
-            }
-        }
-        else {
-            // put a default values to missing ores
-            for(Ore ore: Ore.values()) {
-                if(!table.containsKey(ore)) {
-                    table.put(ore, defaultValue);
-                }
-            }
-        }
     }
 
-    public static final OreConfig defaultValue = new OreConfig(true, 4, 10, new String[] {}, new String[] {});
-    public static final OreConfig empty = new OreConfig(false, 0, 0, new String[] {}, new String[] {});
+    public static final OreConfig defaultValue = new OreConfig(true, 4, 10, 30, 60);
+    public static final OreConfig empty = new OreConfig(false, 0, 0, 0, 60);
 
-    private static final class OreConfig {
+    public static final class OreConfig {
 
         private final boolean enabled;
         private final int orePerChunk;
         private final int oreAmount;
-        private final String[] whitelist;
-        private final String[] blacklist;
+        private final int minY;
+        private final int maxY;
 
-        public OreConfig(boolean enabled, int orePerChunk, int oreAmount, String[] whitelist, String[] blacklist) {
+        public OreConfig(boolean enabled, int orePerChunk, int oreAmount, int minY, int maxY) {
             this.enabled = enabled;
             this.orePerChunk = orePerChunk;
             this.oreAmount = oreAmount;
-            this.whitelist = whitelist;
-            this.blacklist = blacklist;
+            this.minY = minY;
+            this.maxY = maxY;
         }
 
         public boolean isEnabled() {
@@ -78,20 +72,12 @@ public class OreData extends JsonReloadListener {
             return oreAmount;
         }
 
-        public String[] getWhitelist() {
-            return whitelist;
+        public int getMinY() {
+            return minY;
         }
 
-        public String[] getBlacklist() {
-            return blacklist;
-        }
-
-        public boolean emptyWhitelist() {
-            return whitelist.length == 0;
-        }
-
-        public boolean emptyBlacklist() {
-            return blacklist.length == 0;
+        public int getMaxY() {
+            return maxY;
         }
 
         public static class Adapter implements JsonDeserializer<OreConfig> {
@@ -104,9 +90,9 @@ public class OreData extends JsonReloadListener {
                 boolean e = object.get("enabled").getAsBoolean();
                 int ore = object.get("orePerChunk").getAsInt();
                 int oreA = object.get("oreAmount").getAsInt();
-                String[] whitelist = context.deserialize(object.get("biomeWhitelist"), String[].class);
-                String[] blacklist = context.deserialize(object.get("biomeBlacklist"), String[].class);
-                return new OreConfig(e, ore, oreA, whitelist, blacklist);
+                int minY = object.get("minY").getAsInt();
+                int maxY = object.get("maxY").getAsInt();
+                return new OreConfig(e, ore, oreA, minY, maxY);
             }
         }
     }
